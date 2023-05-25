@@ -5,6 +5,4 @@ class BackOffice extends \ActiveRecord\Model
 {
 
 
-
-
 }

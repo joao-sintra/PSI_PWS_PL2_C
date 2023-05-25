@@ -31,7 +31,8 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -45,11 +46,11 @@
 
                 <li><a href="index.php?c=plano&a=index">Calculadora</a></li>
                 <li><a href="index.php?c=book&a=index">Book</a></li>
-                <?php if($auth->isLoggedIn()){ ?>
-                <li><a href="index.php?c=auth&a=logout"> Logout (<?= $auth->getUserName()?>)</a></li>
+                <?php if ($auth->isLoggedIn()) { ?>
+                    <li><a href="index.php?c=auth&a=logout"> Logout (<?= $auth->getUserName() ?>)</a></li>
                 <?php } else { ?>
-                <li><a href="index.php?c=auth&a=index"> Login </a></li>
-                <?php }?>
+                    <li><a href="index.php?c=auth&a=index"> Login </a></li>
+                <?php } ?>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -63,7 +64,7 @@
 
 <footer class="footer">
     <div class="container">
-        <h4 class="text-muted">Site feito por João Sintra .<img src="public/img/nice.jpg" width="150px" ></h4>
+        <h4 class="text-muted">Site feito por João Sintra .<img src="public/img/nice.jpg" width="150px"></h4>
 
     </div>
 </footer>

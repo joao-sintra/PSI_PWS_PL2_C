@@ -4,13 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa99699d-7d5d-43e5-8aa3-77cf0fa89cd9" name="Changes" comment="Clean Framework" />
+    <list default="true" id="fa99699d-7d5d-43e5-8aa3-77cf0fa89cd9" name="Changes" comment="Clean Framework">
+      <change afterPath="$PROJECT_DIR$/controllers/EmpresaController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/FolhaObraController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/IvaController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/LinhaObraController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/ServicoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Empresa.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Iva.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/backoffice/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/frontoffice/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/layout/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/BackOfficeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/BackOfficeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/BackOffice.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/BackOffice.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/startup/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/startup/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/backoffice/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/backoffice/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/frontOffice.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/frontoffice.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -20,6 +43,9 @@
         <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -36,6 +62,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="2ONER08GkVugqXGQGquIovN5TRu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -45,14 +72,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/wamp64/www/PWS/projeto-PWS/wsgest",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "last_opened_file_path": "C:/wamp64/www/WSGest",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "CodeWithMe",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -93,6 +121,12 @@
       <workItem from="1684502354725" duration="5699000" />
       <workItem from="1685023538717" duration="2899000" />
       <workItem from="1685032614000" duration="257000" />
+      <workItem from="1685037291192" duration="61000" />
+      <workItem from="1685037359416" duration="22000" />
+      <workItem from="1685037569235" duration="12000" />
+      <workItem from="1685037581914" duration="4000" />
+      <workItem from="1685037603702" duration="1642000" />
+      <workItem from="1685049306744" duration="1357000" />
     </task>
     <servers />
   </component>
