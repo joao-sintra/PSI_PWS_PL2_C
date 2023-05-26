@@ -5,28 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa99699d-7d5d-43e5-8aa3-77cf0fa89cd9" name="Changes" comment="Clean Framework">
-      <change afterPath="$PROJECT_DIR$/controllers/EmpresaController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/FolhaObraController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/IvaController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/LinhaObraController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/ServicoController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Empresa.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Iva.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/stylesheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/backoffice/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/frontoffice/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/layout/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/WSGest.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/BackOfficeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/BackOfficeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/BackOffice.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/BackOffice.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/startup/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/startup/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/backoffice/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/backoffice/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/backoffice/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/login/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/frontoffice/index.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/default.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout/frontOffice.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/frontoffice.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +56,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="2ONER08GkVugqXGQGquIovN5TRu" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -73,7 +69,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "C:/wamp64/www/WSGest",
+    "last_opened_file_path": "C:/wamp64/www/PWS/creditapp",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -127,6 +123,8 @@
       <workItem from="1685037581914" duration="4000" />
       <workItem from="1685037603702" duration="1642000" />
       <workItem from="1685049306744" duration="1357000" />
+      <workItem from="1685106902170" duration="1324000" />
+      <workItem from="1685108273845" duration="4286000" />
     </task>
     <servers />
   </component>

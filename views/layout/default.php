@@ -246,7 +246,7 @@
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <a href="index.php?c=backoffice&a=login" class="nav-link active">
-                                    <i class="far fa-circle nav-icon"></i>
+                                    <i class="fas fa-user nav-icon"></i>
                                     <p>Login</p>
                                 </a>
                             </li>
@@ -276,47 +276,31 @@
 
     <div class="content-wrapper">
 
-        <div class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h1 class="m-0">Starter Page</h1>
-                    </div>
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Starter Page</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        <?php require_once($viewPath); ?>
 
 
-        <div class="content">
-            <?php require_once($viewPath); ?>
+    </div>
+</div>
 
-        </div>
+
+<aside class="control-sidebar control-sidebar-dark">
+
+    <div class="p-3">
+        <h5>Title</h5>
+        <p>Sidebar content</p>
+    </div>
+</aside>
+
+<div>
+<footer class="main-footer">
+
+    <div class="float-right d-none d-sm-inline">
+        Anything you want
     </div>
 
-
-    <aside class="control-sidebar control-sidebar-dark">
-
-        <div class="p-3">
-            <h5>Title</h5>
-            <p>Sidebar content</p>
-        </div>
-    </aside>
-
-
-    <footer class="main-footer">
-
-        <div class="float-right d-none d-sm-inline">
-            Anything you want
-        </div>
-
-        <strong>Copyright &copy; 2014-2021 <a href=""><?= constant('APP_NAME') ?></a>.</strong> All rights reserved.
-    </footer>
+    <strong>Copyright &copy; 2014-2021 <a href=""><?= constant('APP_NAME') ?></a>.</strong> All rights reserved.
+</footer>
 </div>
 
 

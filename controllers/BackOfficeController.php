@@ -4,11 +4,8 @@ class BackOfficeController extends Controller
 {
     public function index()
     {
-        $this->renderView('backoffice', 'index',[]);
+        $this->renderView('backoffice', 'index');
     }
-    public function login(){
 
-        $this->renderView('backoffice', 'index',[],'login');
-    }
 }
 
