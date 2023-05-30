@@ -1,7 +1,7 @@
 <?php
 
 
-class BackOffice extends \ActiveRecord\Model
+class BackOffice extends ActiveRecord\Model
 {
 
 

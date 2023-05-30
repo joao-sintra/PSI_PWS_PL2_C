@@ -12,9 +12,9 @@ class Auth
     }
 
 
-    public function CheckAuth($usr, $pass)
+    public function CheckAuth($user, $pass)
     {
-        $user = User::find_by_username_and_password($usr, $pass);
+        $user = User::find_by_username_and_password($user, $pass);
 
         if (is_null($user)) {
             return false;

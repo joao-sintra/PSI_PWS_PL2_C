@@ -245,7 +245,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="index.php?c=backoffice&a=login" class="nav-link active">
+                                <a href="index.php?c=login&a=index" class="nav-link active">
                                     <i class="fas fa-user nav-icon"></i>
                                     <p>Login</p>
                                 </a>
