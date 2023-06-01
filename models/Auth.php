@@ -7,7 +7,6 @@ class Auth
         if (session_status() != 2) {
             session_start();
         }
-
     }
 
 
@@ -64,11 +63,9 @@ class Auth
     }
 
     public function isLoggedInAs($roles=[]){
-    if($this->isLoggedIn()){
-        $role=$this->getUserRole();
-        return in_array($role,$roles);
-        
-    }
-
+        if($this->isLoggedIn()){
+            $role=$this->getUserRole();
+            return in_array($role,$roles);
+        }
     }
 }

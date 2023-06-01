@@ -1,6 +1,6 @@
 <div class="login-box">
     <div class="login-logo">
-        <a href="../../index2.html"><b>Admin</b>LTE</a>
+        <a href="../../index2.html"><b><?= constant('APP_NAME') ?></b></a>
     </div>
 
     <div class="card">
