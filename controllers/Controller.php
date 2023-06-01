@@ -4,7 +4,7 @@
 
         protected function renderView($controllerPrefix, $viewName, $data = [], $layout = 'default') {
             extract($data);
-           // $auth = new Auth();
+            $auth = new Auth();
             $viewPath = 'views/' . $controllerPrefix . '/' . $viewName . '.php';
             $layoutPath = 'views/layout/' . $layout . '.php';
             require_once($layoutPath);

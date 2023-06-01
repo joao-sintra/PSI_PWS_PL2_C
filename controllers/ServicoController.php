@@ -3,80 +3,100 @@ require_once 'models/Servico.php';
 require_once 'controllers/Controller.php';
 
 
-class ServicoController extends Controller {
+class ServicoController extends Controller
+{
 
-    public function index(){
+    public function index()
+    {
         $servicos = Servico::all();
 
         //mostrar a vista index passando os dados por parâmetro
-        $this -> renderView('servico', 'index', ['servicos' => $servicos]);
+        $this->renderView('servico', 'index', ['servicos' => $servicos]);
     }
 
-    public function show($id) {
+    public function show($id)
+    {
         $servico = Servico::find($id);
 
         if (is_null($servico)) {
             //TODO redirect to standard error page
 
         } else {
+
             //mostrar a vista show passando os dados por parâmetro
-            $this -> renderView('servico', 'show', ['servico' => $servico]);
+            $iva = Iva::find($servico->iva_id);
+
+
+            $this->renderView('servico', 'show', ['servico' => $servico, 'iva' => $iva]);
         }
     }
 
-    public function create() {
-        $this -> renderView('servico', 'create');
+    public function create()
+    {
+        $ivas = Iva::all();
+
+        $this->renderView('servico', 'create', ['ivas' => $ivas]);
     }
 
-    public function store(){
-        $servico = new Servico($this -> getHTTPPost());
+    public function store()
+    {
+        $servico = new Servico($this->getHTTPPost());
 
-        if($servico->is_valid()){
+        if ($servico->is_valid()) {
             $servico->save();
             //redirecionar para o index
-            $this -> redirectToRoute('servico', 'index');
+            $this->redirectToRoute('servico', 'index');
 
         } else {
             //mostrar vista create passando o modelo como parâmetro
+            $ivas = Iva::all();
 
-            $this -> renderView('servico', 'create', ['servico' => $servico]);
+            $this->renderView('servico', 'create', ['servico' => $servico, 'ivas' => $ivas]);
         }
     }
 
-    public function edit($id) {
+    public function edit($id)
+    {
         $servico = Servico::find($id);
 
         if (is_null($servico)) {
             //TODO redirect to standard error page
-            $this -> renderView('genre', 'edit', ['servico' => $servico]);
+            $this->renderView('genre', 'edit', ['servico' => $servico]);
 
         } else {
             //mostrar a vista edit passando os dados por parâmetro
-            $this -> renderView('servico', 'edit', ['servico' => $servico]);
+            $ivas = Iva::all();
+
+            $this->renderView('servico', 'edit', ['servico' => $servico, 'ivas' => $ivas]);
+
+
         }
     }
 
-    public function update($id) {
+    public function update($id)
+    {
         $servico = Servico::find($id);
-        $servico -> update_attributes($this -> getHTTPPost());
+        $servico->update_attributes($this->getHTTPPost());
 
-        if($servico->is_valid()){
+        if ($servico->is_valid()) {
             $servico->save();
 
             //redirecionar para o index
-            $this -> redirectToRoute('servico', 'index');
+            $this->redirectToRoute('servico', 'index');
 
         } else {
             //mostrar vista edit passando o modelo como parâmetro
-            $this -> renderView('servico', 'edit', ['servico' => $servico]);
+            $ivas = Iva::all();
+            $this->renderView('servico', 'edit', ['servico' => $servico, 'ivas' => $ivas]);
         }
     }
 
-    public function delete($id) {
+    public function delete($id)
+    {
         $servico = Servico::find($id);
         $servico->delete();
 
         //redirecionar para o index
-        $this -> redirectToRoute('servico', 'index');
+        $this->redirectToRoute('servico', 'index');
     }
 }

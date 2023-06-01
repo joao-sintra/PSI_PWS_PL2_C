@@ -16,14 +16,28 @@ class LoginController extends Controller
         $auth = new Auth();
 
         if($auth -> checkAuth($utilizador, $senha)) {
-            echo 'Login com sucesso';
-            if($auth->isLoggedInAs())
-                //falta validar as roles para mandar para as views certas 
-           echo $auth->getUsername(). ' '. $auth->getUserId(). ' ' . $auth->getUserRole();
+            //echo 'Login com sucesso <br>';
+            //echo  '-> '.$auth->getUserId(). ' '.$auth->getUsername().' ' . $auth->getUserRole();
+            //if($auth->isLoggedInAs())
+            $role = $auth ->getUserRole();
+            switch ($role){
+                case 'admin':
+                    $this->redirectToRoute('backoffice','index');
+                    break;
+                case 'funcionario':
+                    $this->redirectToRoute('backoffice','index');
+                    break;
+                case 'cliente':
+                    $this->redirectToRoute('frontoffice','index');
+                    break;
+                default:
+                    break;
+            }
             
         } else {
-           // echo 'Login falho';
-            //redirect po index
+            //redirect para o index
+            $this->redirectToRoute('login','index');
+
         }
     }
   
