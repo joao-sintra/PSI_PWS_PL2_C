@@ -20,7 +20,7 @@ return [
     'login' => [
         'index' => ['GET', 'LoginController', 'index'],
         'login' => ['POST', 'LoginController', 'checkLogin'],
-
+        'logout' => ['GET', 'LoginController', 'logout'],
     ],
     'servico' => [
         'index' => ['GET', 'ServicoController', 'index'],

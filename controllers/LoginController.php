@@ -37,8 +37,13 @@ class LoginController extends Controller
         } else {
             //redirect para o index
             $this->redirectToRoute('login','index');
-
         }
+    }
+
+    public function logout(){
+        $auth = new Auth();
+        $auth -> logout();
+        $this->redirectToRoute('login','index');
     }
   
     
