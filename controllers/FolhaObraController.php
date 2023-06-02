@@ -6,5 +6,10 @@ class FolhaObraController extends Controller
     {
         $this->renderView('folhaobra', 'index',[], 'backoffice');
     }
+
+    public function create()
+    {
+        $this->renderView('empresa', 'create');
+    }
 }
 

@@ -110,11 +110,11 @@
 
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="info">
-                    <a href="#" class="d-block"><?php if ($auth -> isLoggedIn()) { ?>
-                            <a href="index.php?c=login&a=logout">Logout (<?= $auth -> getUserName()?>)</a>
-                        <?php } else {?>
+                    <a href="#" class="d-block"><?php if ($auth->isLoggedIn()) { ?>
+                            <a href="index.php?c=login&a=logout">Logout (<?= $auth->getUserName() ?>)</a>
+                        <?php } else { ?>
                             <a href="index.php?c=login&a=index">Login</a>
-                        <?php }?></a>
+                        <?php } ?></a>
                 </div>
             </div>
             <nav class="mt-2">
@@ -122,69 +122,74 @@
                     data-accordion="false">
 
                     <li class="nav-item menu-open">
-                            <a href="#" class="nav-link active">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Dashboard</p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="fas fa-file-import nav-icon"></i>
-                                        <p>Emitir FO</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-check-circle nav-icon"></i>
-                                        <p>FO Emitidas</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="fas fa-user-plus nav-icon"></i>
-                                        <p>Registo Clientes</p>
-                                    </a>
-                                </li>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-server nav-icon"></i>
-                            <p>
-                                Gestão de Dados
-                                <i class="right fas fa-angle-left"></i>
-                            </p>
+                        <a href="#" class="nav-link active">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>Dashboard</p>
                         </a>
                         <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-file-import nav-icon"></i>
+                                    <p>Emitir FO</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="far fa-check-circle nav-icon"></i>
+                                    <p>FO Emitidas</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-user-plus nav-icon"></i>
+                                    <p>Registo Clientes</p>
+                                </a>
+                            </li>
+                    </li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-server nav-icon"></i>
+                        <p>
+                            Gestão de Dados
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <?php if ($auth->isLoggedInAs($roles = ['admin'])) {?>
                             <li class="nav-item">
                                 <a href="./index.html" class="nav-link active">
                                     <i class="fas fa-users nav-icon"></i>
                                     <p>Users</p>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="./index2.html" class="nav-link">
-                                    <i class="fas fa-file-alt nav-icon"></i>
-                                    <p>Serviços</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="./index3.html" class="nav-link">
-                                    <i class="fas fa-tags nav-icon"></i>
-                                    <p>IVA</p>
-                                </a>
-                            </li>
-                            </li>
-                            <li class="nav-item">
-                                <a href="./index3.html" class="nav-link">
-                                    <i class="fas fa-building nav-icon"></i>
-                                    <p>Empresa</p>
-                                </a>
-                            </li>
-                            </li>
-                        </ul>
+                        <?php } ?>
+
+                        <li class="nav-item">
+                            <a href="./index2.html" class="nav-link">
+                                <i class="fas fa-file-alt nav-icon"></i>
+                                <p>Serviços</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./index3.html" class="nav-link">
+                                <i class="fas fa-tags nav-icon"></i>
+                                <p>IVA</p>
+                            </a>
+                        </li>
+                </li>
+                <?php if ($auth->isLoggedInAs($roles = ['admin'])) {?>
+                    <li class="nav-item">
+                        <a href="./index3.html" class="nav-link">
+                            <i class="fas fa-building nav-icon"></i>
+                            <p>Empresa</p>
+                        </a>
                     </li>
+                <?php } ?>
+                </li>
+                </ul>
+                </li>
                 </ul>
             </nav>
 
@@ -209,14 +214,14 @@
 </aside>
 
 <div>
-<footer class="main-footer">
+    <footer class="main-footer">
 
-    <div class="float-right d-none d-sm-inline">
-        Anything you want
-    </div>
+        <div class="float-right d-none d-sm-inline">
+            Anything you want
+        </div>
 
-    <strong>Copyright &copy; 2014-2021 <a href=""><?= constant('APP_NAME') ?></a>.</strong> All rights reserved.
-</footer>
+        <strong>Copyright &copy; 2014-2021 <a href=""><?= constant('APP_NAME') ?></a>.</strong> All rights reserved.
+    </footer>
 </div>
 
 

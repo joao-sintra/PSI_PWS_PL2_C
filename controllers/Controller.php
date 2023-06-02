@@ -54,10 +54,10 @@
             return isset($_GET[$key]);
         }
         //Verifica se o utilizador está autenticado
-        protected function authenticationFilter(){
+        protected function authenticationFilterAllows($roles=[]){
             $auth = new Auth();
 
-            if(!$auth -> isLoggedIn()){
+            if(!$auth -> isLoggedInAs($roles)){
                 header('Location: '.constant('INVALID_ACCESS_ROUTE'));
             }
 

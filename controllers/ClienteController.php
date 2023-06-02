@@ -3,7 +3,8 @@
     require_once 'models/User.php';
     require_once 'controllers/Controller.php';
 
-class UserController extends Controller
+
+class ClienteController extends Controller
 {
     public function index()
     {
