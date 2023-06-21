@@ -5,6 +5,8 @@ require_once 'controllers/FrontOfficeController.php';
 require_once 'controllers/LoginController.php';
 require_once 'controllers/ServicoController.php';
 require_once 'controllers/LinhaObraController.php';
+require_once 'controllers/FolhaObraController.php';
+
 
 return [
     'defaultRoute' => ['GET', 'BackOfficeController', 'index'],
@@ -17,11 +19,13 @@ return [
         'index' => ['GET', 'FrontOfficeController', 'index']
 
     ],
+
     'login' => [
         'index' => ['GET', 'LoginController', 'index'],
         'login' => ['POST', 'LoginController', 'checkLogin'],
         'logout' => ['GET', 'LoginController', 'logout'],
     ],
+
     'servico' => [
         'index' => ['GET', 'ServicoController', 'index'],
         'show' => ['GET', 'ServicoController', 'show'],
@@ -31,6 +35,7 @@ return [
         'update' => ['POST', 'ServicoController', 'update'],
         'delete' => ['GET', 'ServicoController', 'delete'],
         ],
+
     'empresa' => [
         'index' => ['GET', 'EmpresaController', 'index'],
         'show' => ['GET', 'EmpresaController', 'show'],
@@ -40,6 +45,7 @@ return [
         'update' => ['POST', 'EmpresaController', 'update'],
         'delete' => ['GET', 'EmpresaController', 'delete'],
     ],
+
     'user' => [
         'index' => ['GET', 'UserController', 'index'],
         'show' => ['GET', 'UserController', 'show'],
@@ -60,7 +66,6 @@ return [
         'delete' => ['GET', 'IvaController', 'delete'],
     ],
 
-
     'linhaobra' => [
         'index' => ['GET', 'LinhaObraController', 'index'],
         'show' => ['GET', 'LinhaObraController', 'show'],
@@ -72,11 +77,9 @@ return [
     ],
 
     'folhaobra' => [
-        'index' => ['GET', 'FolhaObraController', 'index'],
-        'show' => ['GET', 'FolhaObraController', 'show'],
         'create' => ['GET', 'FolhaObraController', 'create'],
+        'selectcliente' => ['GET', 'FolhaObraController', 'selectcliente'],
         'store' => ['POST', 'FolhaObraController', 'store'],
-        'edit' => ['GET', 'FolhaObraController', 'edit'],
         'update' => ['POST', 'FolhaObraController', 'update'],
         'delete' => ['GET', 'FolhaObraController', 'delete'],
     ],

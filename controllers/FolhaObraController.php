@@ -2,14 +2,19 @@
 
 class FolhaObraController extends Controller
 {
-    public function index()
-    {
-        $this->renderView('folhaobra', 'index',[], 'backoffice');
-    }
-
     public function create()
     {
-        $this->renderView('empresa', 'create');
+        $this->renderView('folhaobra', 'create');
+    }
+
+    public function selectcliente()
+    {
+        $this->renderView('folhaobra', 'selectcliente');
+    }
+
+    public function store($idCliente)
+    {
+        $this->renderView('folhaobra', 'selectcliente');
     }
 }
 

@@ -5,7 +5,7 @@ require_once 'controllers/Controller.php';
 
 class LinhaObraController extends Controller
 {
-    public function index(){
+    public function index($idFolhaObra){
         $linhasobras = LinhaObra::all();
 
         //mostrar a vista index passando os dados por parâmetro

@@ -7,7 +7,7 @@
         $cfg->set_model_directory('./models');
         $cfg->set_connections(
             array(
-                'development' => 'mysql://root@localhost:3308/wsgest',
+                'development' => 'mysql://root@localhost/wsgest',
             )
         );
     });

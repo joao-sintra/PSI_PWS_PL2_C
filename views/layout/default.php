@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?= constant('APP_NAME') ?> | Início</title>
 
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -121,32 +120,30 @@
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                     data-accordion="false">
 
-                    <li class="nav-item menu-open">
-                        <a href="#" class="nav-link active">
+                    <li class="nav-item">
+                        <a href="index.php?c=backoffice&a=index" class="nav-link ">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>Dashboard</p>
                         </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="fas fa-file-import nav-icon"></i>
-                                    <p>Emitir FO</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-check-circle nav-icon"></i>
-                                    <p>FO Emitidas</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="fas fa-user-plus nav-icon"></i>
-                                    <p>Registo Clientes</p>
-                                </a>
-                            </li>
+                        <li class="nav-item">
+                            <a href="index.php?c=folhaobra&a=create" class="nav-link">
+                                <i class="fas fa-file-import nav-icon"></i>
+                                <p>Emitir FO</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="far fa-check-circle nav-icon"></i>
+                                <p>FO Emitidas</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-user-plus nav-icon"></i>
+                                <p>Registo Clientes</p>
+                            </a>
+                        </li>
                     </li>
-                </ul>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
@@ -159,7 +156,7 @@
                     <ul class="nav nav-treeview">
                         <?php if ($auth->isLoggedInAs($roles = ['admin'])) {?>
                             <li class="nav-item">
-                                <a href="./index.html" class="nav-link active">
+                                <a href="./index.html" class="nav-link">
                                     <i class="fas fa-users nav-icon"></i>
                                     <p>Users</p>
                                 </a>
@@ -205,25 +202,25 @@
 </div>
 
 
-<aside class="control-sidebar control-sidebar-dark">
+    <aside class="control-sidebar control-sidebar-dark">
 
-    <div class="p-3">
-        <h5>Title</h5>
-        <p>Sidebar content</p>
-    </div>
-</aside>
-
-<div>
-    <footer class="main-footer">
-
-        <div class="float-right d-none d-sm-inline">
-            Anything you want
+        <div class="p-3">
+            <h5>Title</h5>
+            <p>Sidebar content</p>
         </div>
+    </aside>
 
-        <strong>Copyright &copy; 2014-2021 <a href=""><?= constant('APP_NAME') ?></a>.</strong> All rights reserved.
-    </footer>
-</div>
 
+  </div>
+
+<footer class="main-footer">
+    <strong>Copyright &copy; 2014-2021 <a href=""><?= constant('APP_NAME') ?></a>.</strong> All rights reserved.
+    <div class="float-right d-none d-sm-inline">
+        Anything you want
+    </div>
+
+
+</footer>
 
 <script src="public/plugins/jquery/jquery.min.js"></script>
 
