@@ -49,13 +49,23 @@
                             <address>
                                 Dados do Cliente:
 
-                            </address>
-                            <a href="index.php?c=folhaobra&a=selectcliente" class="btn btn-info"
-                               role="button">Selecionar</a>
+                                </address>
+                                <a href="index.php?c=folhaobra&a=selectcliente" class="btn btn-info"
+                                   role="button">Selecionar</a>
+                            <?php } else { ?>
+                                <address>
+                                    Dados do Cliente:<br>
+                                    <strong><?= $users->username ?></strong><br>
+                                    <?= $users->morada ?><br>
+                                    <?= $users->localidade ?>, <?= $users->codigopostal ?><br>
+                                    Telefone: <?= $users->telefone ?><br>
+                                    Email: <?= $users->email ?><br>
+                                </address>
+                            <?php } ?>
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-4 invoice-col">
-                            <b>Folha de obra #101</b><br>
+                            <b>Folha de obra #<?= $folhasObra->id ?></b><br>
 
 
                             <b>Pagamento até:</b> 10/06/2023<br>

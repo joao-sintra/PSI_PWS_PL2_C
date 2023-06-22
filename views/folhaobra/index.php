@@ -50,6 +50,7 @@
             <table class="table table-head-fixed text-nowrap">
                 <thead>
                 <tr>
+                    <th>Nº Folha Obra</th>
                     <th>Data</th>
                     <th>Valor Total</th>
                     <th>Iva Total</th>
@@ -62,6 +63,7 @@
                 <tbody>
                 <?php foreach ($folhasObra as $folhaobra) { ?>
                     <tr>
+                        <td><?= $folhaobra->id ?></td>
                         <td><?= date_format($folhaobra->data, "Y/m/d") ?></td>
                         <td><?= $folhaobra->valortotal ?></td>
                         <td><?= $folhaobra->ivatotal ?></td>
