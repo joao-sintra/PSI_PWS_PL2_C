@@ -78,9 +78,11 @@ return [
 
     'folhaobra' => [
         'create' => ['GET', 'FolhaObraController', 'create'],
+        'selectservico' => ['GET', 'FolhaObraController', 'selectservico'],
         'selectcliente' => ['GET', 'FolhaObraController', 'selectcliente'],
         'store' => ['POST', 'FolhaObraController', 'store'],
         'update' => ['POST', 'FolhaObraController', 'update'],
         'delete' => ['GET', 'FolhaObraController', 'delete'],
+        'index' => ['GET', 'FolhaObraController', 'index'],
     ],
 ];

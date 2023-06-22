@@ -50,25 +50,30 @@
                     <thead>
                     <tr>
                         <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
                         <th>NIF</th>
+                        <th>Morada</th>
+                        <th>Codigo Postal</th>
+                        <th>Localidade</th>
                         <th>Escolher</th>
                     </tr>
                     </thead>
                     <tbody>
+                    <?php foreach ($users as $clientes) { ?>
                     <tr>
-                        <td>Rocky Doe</td>
-                        <td>538274247</td>
+                        <td><?= $clientes->username ?></td>
+                        <td><?= $clientes->email ?></td>
+                        <td><?= $clientes->telefone ?></td>
+                        <td><?= $clientes->nif ?></td>
+                        <td><?= $clientes->morada ?></td>
+                        <td><?= $clientes->codigopostal ?></td>
+                        <td><?= $clientes->localidade ?></td>
                         <td>
                             <a href="index.php?c=folhaobra&a=create" class="btn btn-success btn-sm" role="button">SELECIONAR</a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>Rocky Doe</td>
-                        <td>538274247</td>
-                        <td>
-                            <a href="index.php?c=folhaobra&a=create" class="btn btn-success btn-sm" role="button">SELECIONAR</a>
-                        </td>
-                    </tr>
+                    <?php } ?>
                     </tbody>
                 </table>
             </div>
