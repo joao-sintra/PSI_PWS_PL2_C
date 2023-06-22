@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?= constant('APP_NAME') ?> | Emitir FO</title>
+
+</head>
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
@@ -7,7 +15,7 @@
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="index.php?c=backoffice&a=index">Dashboard</a></li>
-                    <li class="breadcrumb-item active">Emitir Folha de Obra</li>
+                    <li class="breadcrumb-item active">Emitir FO</li>
                 </ol>
             </div>
         </div>
@@ -26,7 +34,7 @@
                         <div class="col-12">
                             <h4>
                                 <i class="fas fa-globe"></i> <?= constant('APP_NAME') ?>
-                                <small class="float-right">Data: 27/05/2023</small>
+                                <small class="float-right">Data: <?= $dataFormatada ?></small>
                             </h4>
                         </div>
                         <!-- /.col -->
@@ -36,16 +44,16 @@
                         <div class="col-sm-4 invoice-col">
                             De
                             <address>
-                                <strong>Oficina do Mecânico</strong><br>
-                                Rua das Empresas, 2400-200, Leiria<br>
-                                NIF: 123456789<br>
-                                Telefone: (351) 916 773 888<br>
-                                Email: oficina.mecanico@mail.com
+                                <strong><?= $empresa->designacaosocial ?></strong><br>
+                                <?= $empresa->morada ?>, <?= $empresa->codigopostal ?>, <?= $empresa->localidade ?><br>
+                                NIF: <?= $empresa->nif ?>, <br>
+                                Telefone: <?= $empresa->telefone ?><br>
+                                Email: <?= $empresa->email ?><br>
                             </address>
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-4 invoice-col">
-
+                            <?php if(!isset($users->id)) { ?>
                             <address>
                                 Dados do Cliente:
 
@@ -65,7 +73,7 @@
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-4 invoice-col">
-                            <b>Folha de obra #<?= $folhasObra->id ?></b><br>
+                            <b>Folha de obra #<?= $folhaObra->id+1 ?></b><br>
 
 
                             <b>Pagamento até:</b> 10/06/2023<br>
@@ -81,10 +89,12 @@
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
-                                    <th>Quantidade</th>
-                                    <th>Produto</th>
-                                    <th>Serial #</th>
-                                    <th>Descrição</th>
+                                    <th>Ref.</th>
+                                    <th>Desc.</th>
+                                    <th>Qtn.</th>
+                                    <th>Pr. Uni.</th>
+                                    <th>IVA Valor</th>
+                                    <th>Valor</th>
                                     <th>Subtotal</th>
                                 </tr>
                                 </thead>
@@ -99,10 +109,9 @@
                         <!-- accepted payments column -->
                         <div class="col-6">
                             <p class="lead">Métodos de Pagamento:</p>
-                            <img src="../../dist/img/credit/visa.png" alt="Visa">
-                            <img src="../../dist/img/credit/mastercard.png" alt="Mastercard">
-                            <img src="../../dist/img/credit/american-express.png" alt="American Express">
-                            <img src="../../dist/img/credit/paypal2.png" alt="Paypal">
+                            <img src="public/img/credit/visa.png" alt="Visa">
+                            <img src="public/img/credit/mastercard.png" alt="Mastercard">
+                            <img src="public/img/credit/paypal2.png" alt="Paypal">
 
 
                         </div>

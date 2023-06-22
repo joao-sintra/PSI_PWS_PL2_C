@@ -126,7 +126,7 @@
                             <p>Dashboard</p>
                         </a>
                         <li class="nav-item">
-                            <a href="index.php?c=folhaobra&a=create" class="nav-link">
+                            <a href="index.php?c=folhaobra&a=create&id=0" class="nav-link">
                                 <i class="fas fa-file-import nav-icon"></i>
                                 <p>Emitir FO</p>
                             </a>
@@ -138,7 +138,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="index.php?c=cliente&a=index" class="nav-link">
                                 <i class="fas fa-user-plus nav-icon"></i>
                                 <p>Registo Clientes</p>
                             </a>

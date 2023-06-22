@@ -7,24 +7,21 @@ require_once 'models/FolhaObra.php';
 
 class FolhaObraController extends Controller
 {
-    public function index()
+    public function create($id)
     {
-        $folhasObra = FolhaObra::all();
-
-        $this->renderView('folhaobra', 'index', ['folhasObra' => $folhasObra]);
-    }
-
-    public function create()
-    {
+        $data = Carbon::Now();
+        $dataFormatada = $data -> format('d/m/Y');
+        $folhaObra = FolhaObra::last();
+        $empresa = Empresa::first();
         $users = User::find('all', array('conditions' => array('role = ?', 'cliente')));
 
         if ($id == 0) {
-            $this->renderView('folhaobra', 'create', ['users' => $users]);
+            $this->renderView('folhaobra', 'create', ['users' => $users, 'dataFormatada' => $dataFormatada, 'folhaObra' => $folhaObra, 'empresa' => $empresa]);
 
         } else {
             $user = User::find($id);
 
-            $this->renderView('folhaobra', 'create',['users' => $user]);
+            $this->renderView('folhaobra', 'create', ['users' => $user, 'dataFormatada' => $dataFormatada , 'folhaObra' => $folhaObra, 'empresa' => $empresa]);
         }
     }
 
@@ -48,7 +45,7 @@ class FolhaObraController extends Controller
         else {
             $linhasObra = Linhaobra::all();
 
-            $this->renderView('folhaobra', 'create', ['folhaobra' => $folhaObra, 'linhasobra' => $linhasObra]);
+            $this->renderView('folhaobra', 'create', ['folhaObra' => $folhaObra, 'linhasObra' => $linhasObra]);
         }
 
         $folhaObra->data = Carbon::Now();
@@ -56,8 +53,7 @@ class FolhaObraController extends Controller
         $folhaObra->ivatotal = 0;
         $folhaObra->estado = 'Em lançamento';
         $folhaObra->user_id = $auth->getUserId();
-        $folhaObra->cliente_id = $idcliente;
-
+        $folhaObra->cliente_id = $idCliente;
     }
 }
 

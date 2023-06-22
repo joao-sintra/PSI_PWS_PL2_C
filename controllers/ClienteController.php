@@ -8,83 +8,71 @@ class ClienteController extends Controller
 {
     public function index()
     {
-        $users = User::all();
+        $clientes = User::find('all', array('conditions' => array('role = ?', 'cliente')));
 
         //mostrar a vista index passando os dados por parâmetro
-        $this->renderView('user', 'index', ['users' => $users]);
+        $this->renderView('cliente', 'index', ['clientes' => $clientes]);
     }
 
-    public function show($id)
-    {
-        $user = User::find($id);
-
-        if (is_null($user)) {
-            //TODO redirect to standard error page
-
-        } else {
-            //mostrar a vista show passando os dados por parâmetro
-            $this->renderView('user', 'show', ['user' => $user]);
-        }
-    }
 
     public function create()
     {
-        $this->renderView('user', 'create');
+        $this->renderView('cliente', 'create');
     }
 
     public function store()
     {
-        $user = new User($this->getHTTPPost());
+        $cliente = new User($this->getHTTPPost());
 
-        if ($user->is_valid()) {
-            $user->save();
+        if ($cliente->is_valid()) {
+            $cliente->save();
             //redirecionar para o index
-            $this->redirectToRoute('user', 'index');
+            $this->redirectToRoute('cliente', 'index');
 
         } else {
             //mostrar vista create passando o modelo como parâmetro
 
-            $this->renderView('user', 'create', ['user' => $user]);
+            $this->renderView('cliente', 'create', ['cliente' => $cliente]);
         }
     }
 
     public function edit($id)
     {
-        $user = User::find($id);
+        $cliente = User::find($id);
 
-        if (is_null($user)) {
+        if (is_null($cliente)) {
             //TODO redirect to standard error page
-            $this->renderView('user', 'edit', ['user' => $user]);
+            $this->renderView('cliente', 'edit', ['cliente' => $cliente]);
 
         } else {
             //mostrar a vista edit passando os dados por parâmetro
-            $this->renderView('user', 'edit', ['user' => $user]);
+            $this->renderView('cliente', 'edit', ['cliente' => $cliente]);
         }
     }
 
     public function update($id)
     {
-        $user = User::find($id);
-        $user->update_attributes($this->getHTTPPost());
+        $cliente = User::find($id);
+        $cliente->update_attributes($this->getHTTPPost());
 
-        if ($user->is_valid()) {
-            $user->save();
+        if ($cliente->is_valid()) {
+            $cliente->save();
 
             //redirecionar para o index
-            $this->redirectToRoute('user', 'index');
+            $this->redirectToRoute('cliente', 'index');
 
         } else {
             //mostrar vista edit passando o modelo como parâmetro
-            $this->renderView('user', 'edit', ['user' => $user]);
+            $this->renderView('cliente', 'edit', ['cliente' => $cliente]);
         }
     }
 
     public function delete($id)
     {
-        $user = User::find($id);
-        $user->delete();
+        $cliente = User::find($id);
+        $cliente->delete();
 
         //redirecionar para o index
-        $this->redirectToRoute('user', 'index');
+        $this->redirectToRoute('cliente', 'index');
     }
 }

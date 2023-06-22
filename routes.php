@@ -6,6 +6,8 @@ require_once 'controllers/LoginController.php';
 require_once 'controllers/ServicoController.php';
 require_once 'controllers/LinhaObraController.php';
 require_once 'controllers/FolhaObraController.php';
+require_once 'controllers/ClienteController.php';
+
 
 
 return [
@@ -78,11 +80,19 @@ return [
 
     'folhaobra' => [
         'create' => ['GET', 'FolhaObraController', 'create'],
-        'selectservico' => ['GET', 'FolhaObraController', 'selectservico'],
         'selectcliente' => ['GET', 'FolhaObraController', 'selectcliente'],
         'store' => ['POST', 'FolhaObraController', 'store'],
+        'selectservico' => ['GET', 'FolhaObraController', 'selectservico'],
         'update' => ['POST', 'FolhaObraController', 'update'],
         'delete' => ['GET', 'FolhaObraController', 'delete'],
-        'index' => ['GET', 'FolhaObraController', 'index'],
+    ],
+
+    'cliente' => [
+        'index' => ['GET', 'ClienteController', 'index'],
+        'create' => ['GET', 'ClienteController', 'create'],
+        'store' => ['POST', 'ClienteController', 'store'],
+        'edit' => ['GET', 'ClienteController', 'edit'],
+        'update' => ['POST', 'ClienteController', 'update'],
+        'delete' => ['GET', 'ClienteController', 'delete'],
     ],
 ];
