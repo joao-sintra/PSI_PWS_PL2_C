@@ -4,14 +4,14 @@ class User extends ActiveRecord\Model
 
 {
     static $validates_presence_of = array(
-        array('username','message' => 'tem que preencher o username'),
-        array('password', 'message' => 'tem que preencher o password'),
-        array('email', 'message' => 'tem que preencher o email'),
-        array('telefone','message' => 'tem que preencher o telefone'),
-        array('nif','message' => 'tem que preencher o NIF'),
-        array('morada','message' => 'tem que preencher a morada '),
-        array('codigopostal','message' => 'tem que preencher o código postal'),
-        array('localidade','message' => 'tem que preencher o localidade'),
+        array('username','message' => 'Tem que preencher o nome'),
+        array('password', 'message' => 'Tem que preencher o password'),
+        array('email', 'message' => 'Tem que preencher o email'),
+        array('telefone','message' => 'Tem que preencher o telefone'),
+        array('nif','message' => 'Tem que preencher o NIF'),
+        array('morada','message' => 'Tem que preencher a morada '),
+        array('codigopostal','message' => 'Tem que preencher o código postal'),
+        array('localidade','message' => 'Tem que preencher o localidade'),
     );
     static $validates_size_of = array(
         array('username','maximum' => 30, 'too_long' => 'Não deve ultrapassar os 30 carateres!'),

@@ -31,6 +31,7 @@ class EmpresaController extends Controller
         $this->renderView('empresa', 'create');
     }
 
+    /*
     public function store()
     {
         $empresa = new Empresa($this->getHTTPPost());
@@ -46,6 +47,7 @@ class EmpresaController extends Controller
             $this->renderView('empresa', 'create', ['empresa' => $empresa]);
         }
     }
+    */
 
     public function edit($id)
     {

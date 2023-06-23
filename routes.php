@@ -7,6 +7,8 @@ require_once 'controllers/ServicoController.php';
 require_once 'controllers/LinhaObraController.php';
 require_once 'controllers/FolhaObraController.php';
 require_once 'controllers/ClienteController.php';
+require_once 'controllers/UserController.php';
+
 
 
 
@@ -30,7 +32,7 @@ return [
 
     'servico' => [
         'index' => ['GET', 'ServicoController', 'index'],
-        'show' => ['GET', 'ServicoController', 'show'],
+        //'show' => ['GET', 'ServicoController', 'show'],
         'create' => ['GET', 'ServicoController', 'create'],
         'store' => ['POST', 'ServicoController', 'store'],
         'edit' => ['GET', 'ServicoController', 'edit'],
@@ -40,7 +42,7 @@ return [
 
     'empresa' => [
         'index' => ['GET', 'EmpresaController', 'index'],
-        'show' => ['GET', 'EmpresaController', 'show'],
+        //'show' => ['GET', 'EmpresaController', 'show'],
         'create' => ['GET', 'EmpresaController', 'create'],
         'store' => ['POST', 'EmpresaController', 'store'],
         'edit' => ['GET', 'EmpresaController', 'edit'],
@@ -50,7 +52,7 @@ return [
 
     'user' => [
         'index' => ['GET', 'UserController', 'index'],
-        'show' => ['GET', 'UserController', 'show'],
+        //'show' => ['GET', 'UserController', 'show'],
         'create' => ['GET', 'UserController', 'create'],
         'store' => ['POST', 'UserController', 'store'],
         'edit' => ['GET', 'UserController', 'edit'],
@@ -60,7 +62,7 @@ return [
 
     'iva' => [
         'index' => ['GET', 'IvaController', 'index'],
-        'show' => ['GET', 'IvaController', 'show'],
+        //'show' => ['GET', 'IvaController', 'show'],
         'create' => ['GET', 'IvaController', 'create'],
         'store' => ['POST', 'IvaController', 'store'],
         'edit' => ['GET', 'IvaController', 'edit'],
@@ -89,6 +91,7 @@ return [
 
     'cliente' => [
         'index' => ['GET', 'ClienteController', 'index'],
+        //'show' => ['GET', 'ClienteController', 'show'],
         'create' => ['GET', 'ClienteController', 'create'],
         'store' => ['POST', 'ClienteController', 'store'],
         'edit' => ['GET', 'ClienteController', 'edit'],

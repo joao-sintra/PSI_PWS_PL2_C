@@ -99,7 +99,7 @@
 
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
-        <a href="index3.html" class="brand-link">
+        <a href="index.php?c=backoffice&a=index" class="brand-link">
             <img src="public/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                  style="opacity: .8">
             <span class="brand-text font-weight-light"><?= constant('APP_NAME') ?></span>
@@ -156,7 +156,7 @@
                     <ul class="nav nav-treeview">
                         <?php if ($auth->isLoggedInAs($roles = ['admin'])) {?>
                             <li class="nav-item">
-                                <a href="./index.html" class="nav-link">
+                                <a href="index.php?c=user&a=index" class="nav-link">
                                     <i class="fas fa-users nav-icon"></i>
                                     <p>Users</p>
                                 </a>
@@ -164,13 +164,13 @@
                         <?php } ?>
 
                         <li class="nav-item">
-                            <a href="./index2.html" class="nav-link">
+                            <a href="index.php?c=servico&a=index" class="nav-link">
                                 <i class="fas fa-file-alt nav-icon"></i>
                                 <p>Serviços</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./index3.html" class="nav-link">
+                            <a href="index.php?c=iva&a=index" class="nav-link">
                                 <i class="fas fa-tags nav-icon"></i>
                                 <p>IVA</p>
                             </a>
@@ -178,7 +178,7 @@
                 </li>
                 <?php if ($auth->isLoggedInAs($roles = ['admin'])) {?>
                     <li class="nav-item">
-                        <a href="./index3.html" class="nav-link">
+                        <a href="index.php?c=empresa&a=index" class="nav-link">
                             <i class="fas fa-building nav-icon"></i>
                             <p>Empresa</p>
                         </a>

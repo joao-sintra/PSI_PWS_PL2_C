@@ -1,3 +1,15 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?= constant('APP_NAME') ?> | Início</title>
+
+    <link rel="stylesheet" href="public/plugins/fontawesome-free/css/all.min.css">
+
+</head>
+<body>
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
@@ -73,6 +85,10 @@
                         <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
-
+            </div>
+        </div>
+    </section>
+</body>
+</html>
 
 

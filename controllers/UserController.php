@@ -7,12 +7,13 @@ class UserController extends Controller
 {
     public function index()
     {
-        $users = User::all();
+        $users = User::find('all', array('conditions' => array('role = ?', 'funcionario')));
 
         //mostrar a vista index passando os dados por parâmetro
         $this->renderView('user', 'index', ['users' => $users]);
     }
 
+    /*
     public function show($id)
     {
         $user = User::find($id);
@@ -25,6 +26,7 @@ class UserController extends Controller
             $this->renderView('user', 'show', ['user' => $user]);
         }
     }
+    */
 
     public function create()
     {
