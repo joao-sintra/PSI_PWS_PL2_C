@@ -78,9 +78,9 @@
         </div>
     </div>
     <div class="card-title">
-        <h3 class="text-center"><b>Criar um novo user</h3></b></h3>
+        <h3 class="text-center"><b>Criar um novo serviço</h3></b></h3>
     </div>
-    &ensp; <a href="index.php?c=user&a=create" class="btn btn-success" role="button"><i class="fas fa-plus" style="color: #ffffff;"></i></a>
+    &ensp; <a href="index.php?c=servico&a=create" class="btn btn-success" role="button"><i class="fas fa-plus" style="color: #ffffff;"></i></a>
 </div>
 </section>
 <!-- /.content -->

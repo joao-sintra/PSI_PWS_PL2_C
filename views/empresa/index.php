@@ -33,63 +33,51 @@
 
         <div class="card-body table-responsive p-0" style="height: 450px;">
             <table class="table table-head-fixed text-nowrap">
-                <thead>
-                <tr>
-                    <th>Nº User</th>
-                    <th>Nome</th>
-                    <th>Email</th>
-                    <th>Telefone</th>
-                    <th>NIF</th>
-                    <th>Morada</th>
-                    <th>Código Postal</th>
-                    <th>Localidade</th>
-                    <th>Ações</th>
-                </tr>
-                </thead>
+                <?php if(COUNT($empresas) == 0) { ?>
+                <div class="card-body">
+                        <div class="card-title">
+                            <h3><b>Criar empresa</h3></b></h3> &ensp; <a href="index.php?c=empresa&a=create" class="btn btn-success" role="button"><i class="fas fa-plus" style="color: #ffffff;"></i></a>
+                        </div>
+                </div>
+                <?php } else { ?>
+                    <thead>
+                        <tr>
+                            <th>Nº Empresa</th>
+                            <th>Designação Social</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
+                            <th>NIF</th>
+                            <th>Morada</th>
+                            <th>Código Postal</th>
+                            <th>Localidade</th>
+                            <th>Capital Social</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
                 <tbody>
-                <?php foreach ($users as $user) { ?>
-                    <tr>
-                        <td class="text-center"><?= $user->id ?></td>
-                        <td><?= $user->username ?></td>
-                        <td><?= $user->email ?></td>
-                        <td><?= $user->telefone ?></td>
-                        <td><?= $user->nif ?></td>
-                        <td><?= $user->morada ?></td>
-                        <td><?= $user->codigopostal ?></td>
-                        <td><?= $user->localidade ?></td>
-                        <td>
-                            <a href="index.php?c=user&a=edit&id=<?=$user->id?>" class="btn btn-primary btn-sm" role="button"><i class="fas fa-pencil-alt"></i></a>
-                            <a href="index.php?c=user&a=delete&id=<?=$user->id?>" class="btn btn-danger btn-sm" role="button"><i class="fas fa-trash"></i></a>
-                        </td>
-                    </tr>
-                <?php } ?>
+                    <?php foreach ($empresas as $empresa) { ?>
+                        <tr>
+                            <td class="text-center"><?= $empresa->id ?></td>
+                            <td><?= $empresa->designacaosocial ?></td>
+                            <td><?= $empresa->email ?></td>
+                            <td><?= $empresa->telefone ?></td>
+                            <td><?= $empresa->nif ?></td>
+                            <td><?= $empresa->morada ?></td>
+                            <td><?= $empresa->codigopostal ?></td>
+                            <td><?= $empresa->localidade ?></td>
+                            <td><?= $empresa->capitalsocial ?></td>
+                            <td>
+                                <a href="index.php?c=empresa&a=show&id=<?=$empresa->id?>" class="btn btn-warning btn-sm" role="button"><i class="fas fa-eye" style="color: #ffffff;"></i></a>
+                                <a href="index.php?c=empresa&a=edit&id=<?=$empresa->id?>" class="btn btn-primary btn-sm" role="button"><i class="fas fa-pencil-alt"></i></a>
+                            </td>
+                        </tr>
+                    <?php }
+                        } ?>
                 </tbody>
             </table>
         </div>
     </div>
-    <div class="card-title">
-        <h3 class="text-center"><b>Criar um novo user</h3></b></h3>
-    </div>
-    &ensp; <a href="index.php?c=user&a=create" class="btn btn-success" role="button"><i class="fas fa-plus" style="color: #ffffff;"></i></a>
 </div>
-</section>
-<!-- /.content -->
-
-<!-- Control Sidebar -->
-<aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-</aside>
-<!-- /.control-sidebar -->
-
-<!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
-
 </body>
 </html>
 

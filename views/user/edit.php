@@ -17,7 +17,7 @@
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="index.php?c=cliente&a=index">Users</a></li>
+                    <li class="breadcrumb-item"><a href="index.php?c=user&a=index">Registo Users</a></li>
                     <li class="breadcrumb-item active">Editar User</li>
                 </ol>
             </div>
@@ -27,13 +27,13 @@
 <div class="container d-flex justify-content-center align-items-center">
     <div class="col-md-7 ">
 
-        <div class="card card-primary">
+        <div class="card card-success">
             <div class="card-header">
                 <h3 class="card-title">Editar Informações do User</h3>
             </div>
 
 
-            <form action='index.php?c=user&a=update&id=<?=$user->id?>' method="POST">
+            <form action='index.php?c=cliente&a=update&id=<?=$user->id?>' method="POST">
                 <div class="card-body">
                     <div class="form-group">
                         <label for="username">Nome </label>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Introduza a password..." value="<?=$user -> password?>"><br>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Introduza a password..." value="<?=$user -> password?>">
                         <p><?php
                             if(isset($user->errors)) {
                                 if (is_array($user->errors->on('password'))) {
@@ -69,7 +69,7 @@
                     </div>
                     <div class="form-group">
                         <label for="email">Email </label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Introduza o email..." value="<?=$user -> email?>"><br>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Introduza o email..." value="<?=$user -> email?>">
                         <p><?php
                             if(isset($user->errors)) {
                                 if (is_array($user->errors->on('email'))) {
@@ -85,7 +85,7 @@
                     </div>
                     <div class="form-group">
                         <label for="telefone">Telefone </label>
-                        <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Introduza o telefone..." value="<?=$user -> telefone?>"><br>
+                        <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Introduza o telefone..." value="<?=$user -> telefone?>">
                         <p><?php
                             if(isset($user->errors)) {
                                 if (is_array($user->errors->on('telefone'))) {
@@ -101,7 +101,7 @@
                     </div>
                     <div class="form-group">
                         <label for="nif">NIF </label>
-                        <input type="text" class="form-control" id="nif" name="nif" placeholder="Introduza o NIF..." value="<?=$user -> nif?>"><br>
+                        <input type="text" class="form-control" id="nif" name="nif" placeholder="Introduza o NIF..." value="<?=$user -> nif?>">
                         <p><?php
                             if(isset($user->errors)) {
                                 if (is_array($user->errors->on('nif'))) {
@@ -117,7 +117,7 @@
                     </div>
                     <div class="form-group">
                         <label for="morada">Morada </label>
-                        <input type="text" class="form-control" id="morada" name="morada" placeholder="Introduza a morada..." value="<?=$user -> morada?>"><br>
+                        <input type="text" class="form-control" id="morada" name="morada" placeholder="Introduza a morada..." value="<?=$user -> morada?>">
                         <p><?php
                             if(isset($user->errors)) {
                                 if (is_array($user->errors->on('morada'))) {
@@ -133,7 +133,7 @@
                     </div>
                     <div class="form-group">
                         <label for="codigopostal">Código Postal </label>
-                        <input type="text" class="form-control" id="codigopostal" name="codigopostal" placeholder="Introduza o código postal..." value="<?=$user -> codigopostal?>"><br>
+                        <input type="text" class="form-control" id="codigopostal" name="codigopostal" placeholder="Introduza o código postal..." value="<?=$user -> codigopostal?>">
                         <p><?php
                             if(isset($user->errors)) {
                                 if (is_array($user->errors->on('codigopostal'))) {
@@ -149,7 +149,7 @@
                     </div>
                     <div class="form-group">
                         <label for="localidade">Localidade </label>
-                        <input type="text" class="form-control" id="localidade" name="localidade" placeholder="Introduza a localidade..." value="<?=$user -> localidade?>"><br>
+                        <input type="text" class="form-control" id="localidade" name="localidade" placeholder="Introduza a localidade..." value="<?=$user -> localidade?>">
                         <p><?php
                             if(isset($user->errors)) {
                                 if (is_array($user->errors->on('localidade'))) {
@@ -170,8 +170,8 @@
                 </div>
 
                 <div class="card-footer">
-                    <input class="btn btn-primary" type="submit" value="ATUALIZAR">
                     <a href="index.php?c=user&a=index" class="btn btn-danger" role="button">CANCELAR</i></a>
+                    <input class="btn btn-success" type="submit" value="ATUALIZAR">
                 </div>
             </form>
         </div>
@@ -179,4 +179,3 @@
 </div>
 </body>
 </html>
-

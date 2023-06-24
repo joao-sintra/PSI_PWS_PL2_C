@@ -31,7 +31,7 @@
             <h3 class="card-title ">Registo de Users</h3>
             <div class="card-tools">
                 <div class="input-group input-group-sm" style="width: 200px;">
-                    <input type="text" name="table_search" class="form-control float-left" placeholder="Pesquisar funcionários...">
+                    <input type="text" name="table_search" class="form-control float-left" placeholder="Pesquisar users...">
                     <div class="input-group-append">
                         <button type="submit" class="btn btn-default">
                             <i class="fas fa-search"></i>
@@ -68,6 +68,7 @@
                         <td><?= $user->codigopostal ?></td>
                         <td><?= $user->localidade ?></td>
                         <td>
+                            <a href="index.php?c=user&a=show&id=<?=$user->id?>" class="btn btn-warning btn-sm" role="button"><i class="fas fa-eye" style="color: #ffffff;"></i></a>
                             <a href="index.php?c=user&a=edit&id=<?=$user->id?>" class="btn btn-primary btn-sm" role="button"><i class="fas fa-pencil-alt"></i></a>
                             <a href="index.php?c=user&a=delete&id=<?=$user->id?>" class="btn btn-danger btn-sm" role="button"><i class="fas fa-trash"></i></a>
                         </td>

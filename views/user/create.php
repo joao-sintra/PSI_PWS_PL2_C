@@ -17,7 +17,7 @@
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="index.php?c=cliente&a=index">Users</a></li>
+                    <li class="breadcrumb-item"><a href="index.php?c=user&a=index">Registo Users</a></li>
                     <li class="breadcrumb-item active">Criar Novo User</li>
                 </ol>
             </div>
@@ -27,7 +27,7 @@
 <div class="container d-flex justify-content-center align-items-center">
     <div class="col-md-7 ">
 
-        <div class="card card-primary">
+        <div class="card card-success">
             <div class="card-header">
                 <h3 class="card-title">Informações do User</h3>
             </div>
@@ -106,8 +106,8 @@
                 </div>
 
                 <div class="card-footer">
-                    <input class="btn btn-primary" type="submit" value="CRIAR">
                     <a href="index.php?c=user&a=index" class="btn btn-danger" role="button">CANCELAR</i></a>
+                    <input class="btn btn-success" type="submit" value="CRIAR">
                 </div>
             </form>
         </div>

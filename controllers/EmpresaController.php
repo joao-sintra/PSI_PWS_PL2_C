@@ -31,7 +31,6 @@ class EmpresaController extends Controller
         $this->renderView('empresa', 'create');
     }
 
-    /*
     public function store()
     {
         $empresa = new Empresa($this->getHTTPPost());
@@ -47,7 +46,7 @@ class EmpresaController extends Controller
             $this->renderView('empresa', 'create', ['empresa' => $empresa]);
         }
     }
-    */
+
 
     public function edit($id)
     {
@@ -80,12 +79,4 @@ class EmpresaController extends Controller
         }
     }
 
-    public function delete($id)
-    {
-        $empresa = Empresa::find($id);
-        $empresa->delete();
-
-        //redirecionar para o index
-        $this->redirectToRoute('empresa', 'index');
-    }
 }

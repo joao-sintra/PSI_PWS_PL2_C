@@ -53,7 +53,7 @@
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Introduza a password..." value="<?=$cliente -> password?>"><br>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Introduza a password..." value="<?=$cliente -> password?>">
                         <p><?php
                             if(isset($cliente->errors)) {
                                 if (is_array($cliente->errors->on('password'))) {
@@ -69,7 +69,7 @@
                     </div>
                     <div class="form-group">
                         <label for="email">Email </label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Introduza o email..." value="<?=$cliente -> email?>"><br>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Introduza o email..." value="<?=$cliente -> email?>">
                         <p><?php
                             if(isset($cliente->errors)) {
                                 if (is_array($cliente->errors->on('email'))) {
@@ -85,7 +85,7 @@
                     </div>
                     <div class="form-group">
                         <label for="telefone">Telefone </label>
-                        <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Introduza o telefone..." value="<?=$cliente -> telefone?>"><br>
+                        <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Introduza o telefone..." value="<?=$cliente -> telefone?>">
                         <p><?php
                             if(isset($cliente->errors)) {
                                 if (is_array($cliente->errors->on('telefone'))) {
@@ -101,7 +101,7 @@
                     </div>
                     <div class="form-group">
                         <label for="nif">NIF </label>
-                        <input type="text" class="form-control" id="nif" name="nif" placeholder="Introduza o NIF..." value="<?=$cliente -> nif?>"><br>
+                        <input type="text" class="form-control" id="nif" name="nif" placeholder="Introduza o NIF..." value="<?=$cliente -> nif?>">
                         <p><?php
                             if(isset($cliente->errors)) {
                                 if (is_array($cliente->errors->on('nif'))) {
@@ -117,7 +117,7 @@
                     </div>
                     <div class="form-group">
                         <label for="morada">Morada </label>
-                        <input type="text" class="form-control" id="morada" name="morada" placeholder="Introduza a morada..." value="<?=$cliente -> morada?>"><br>
+                        <input type="text" class="form-control" id="morada" name="morada" placeholder="Introduza a morada..." value="<?=$cliente -> morada?>">
                         <p><?php
                             if(isset($cliente->errors)) {
                                 if (is_array($cliente->errors->on('morada'))) {
@@ -133,7 +133,7 @@
                     </div>
                     <div class="form-group">
                         <label for="codigopostal">Código Postal </label>
-                        <input type="text" class="form-control" id="codigopostal" name="codigopostal" placeholder="Introduza o código postal..." value="<?=$cliente -> codigopostal?>"><br>
+                        <input type="text" class="form-control" id="codigopostal" name="codigopostal" placeholder="Introduza o código postal..." value="<?=$cliente -> codigopostal?>">
                         <p><?php
                             if(isset($cliente->errors)) {
                                 if (is_array($cliente->errors->on('codigopostal'))) {
@@ -149,7 +149,7 @@
                     </div>
                     <div class="form-group">
                         <label for="localidade">Localidade </label>
-                        <input type="text" class="form-control" id="localidade" name="localidade" placeholder="Introduza a localidade..." value="<?=$cliente -> localidade?>"><br>
+                        <input type="text" class="form-control" id="localidade" name="localidade" placeholder="Introduza a localidade..." value="<?=$cliente -> localidade?>">
                         <p><?php
                             if(isset($cliente->errors)) {
                                 if (is_array($cliente->errors->on('localidade'))) {
@@ -170,8 +170,8 @@
                 </div>
 
                 <div class="card-footer">
-                    <input class="btn btn-primary" type="submit" value="ATUALIZAR">
                     <a href="index.php?c=cliente&a=index" class="btn btn-danger" role="button">CANCELAR</i></a>
+                    <input class="btn btn-primary" type="submit" value="ATUALIZAR">
                 </div>
             </form>
         </div>

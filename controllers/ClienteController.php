@@ -14,6 +14,18 @@ class ClienteController extends Controller
         $this->renderView('cliente', 'index', ['clientes' => $clientes]);
     }
 
+    public function show($id)
+    {
+        $cliente = User::find($id);
+
+        if (is_null($cliente)) {
+            //TODO redirect to standard error page
+
+        } else {
+            //mostrar a vista show passando os dados por parâmetro
+            $this->renderView('cliente', 'show', ['cliente' => $cliente]);
+        }
+    }
 
     public function create()
     {

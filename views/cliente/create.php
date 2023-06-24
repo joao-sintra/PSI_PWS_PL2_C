@@ -18,7 +18,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="index.php?c=cliente&a=index">Registo Clientes</a></li>
-                        <li class="breadcrumb-item active">Criar novo cliente</li>
+                        <li class="breadcrumb-item active">Criar Novo Cliente</li>
                     </ol>
                 </div>
             </div>
@@ -106,8 +106,8 @@
                     </div>
 
                     <div class="card-footer">
-                        <input class="btn btn-primary" type="submit" value="CRIAR">
                         <a href="index.php?c=cliente&a=index" class="btn btn-danger" role="button">CANCELAR</i></a>
+                        <input class="btn btn-primary" type="submit" value="CRIAR">
                     </div>
                 </form>
             </div>
