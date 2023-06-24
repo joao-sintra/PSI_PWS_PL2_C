@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?= constant('APP_NAME') ?> | Users</title>
+    <title><?= constant('APP_NAME') ?> | Serviços</title>
 
     <link rel="stylesheet" href="public/plugins/fontawesome-free/css/all.min.css">
 
@@ -19,7 +19,7 @@
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="index.php?c=backoffice&a=index">Dashboard</a></li>
-                    <li class="breadcrumb-item active">Users</li>
+                    <li class="breadcrumb-item active">Serviços</li>
                 </ol>
             </div>
         </div>
@@ -28,10 +28,10 @@
 <div class="col-12">
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title ">Registo de Users</h3>
+            <h3 class="card-title ">Registo de Serviços</h3>
             <div class="card-tools">
                 <div class="input-group input-group-sm" style="width: 200px;">
-                    <input type="text" name="table_search" class="form-control float-left" placeholder="Pesquisar funcionários...">
+                    <input type="text" name="table_search" class="form-control float-left" placeholder="Pesquisar serviços...">
                     <div class="input-group-append">
                         <button type="submit" class="btn btn-default">
                             <i class="fas fa-search"></i>
@@ -45,31 +45,25 @@
             <table class="table table-head-fixed text-nowrap">
                 <thead>
                 <tr>
-                    <th>Nº User</th>
-                    <th>Nome</th>
-                    <th>Email</th>
-                    <th>Telefone</th>
-                    <th>NIF</th>
-                    <th>Morada</th>
-                    <th>Código Postal</th>
-                    <th>Localidade</th>
+                    <th>Nº Serviço</th>
+                    <th>Referência</th>
+                    <th>Descrição</th>
+                    <th>Valor Unit.</th>
+                    <th>IVA</th>
                     <th>Ações</th>
                 </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($users as $user) { ?>
+                <?php foreach ($servicos as $servico) { ?>
                     <tr>
-                        <td class="text-center"><?= $user->id ?></td>
-                        <td><?= $user->username ?></td>
-                        <td><?= $user->email ?></td>
-                        <td><?= $user->telefone ?></td>
-                        <td><?= $user->nif ?></td>
-                        <td><?= $user->morada ?></td>
-                        <td><?= $user->codigopostal ?></td>
-                        <td><?= $user->localidade ?></td>
+                        <td><?= $servico->id ?></td>
+                        <td><?= $servico->referencia ?></td>
+                        <td><?= $servico->descricao ?></td>
+                        <td><?= $servico->valorunitario ?></td>
+                        <td><?= $servico->iva->percentagem?>%</td>
                         <td>
-                            <a href="index.php?c=user&a=edit&id=<?=$user->id?>" class="btn btn-primary btn-sm" role="button"><i class="fas fa-pencil-alt"></i></a>
-                            <a href="index.php?c=user&a=delete&id=<?=$user->id?>" class="btn btn-danger btn-sm" role="button"><i class="fas fa-trash"></i></a>
+                            <a href="index.php?c=servico&a=edit&id=<?=$servico->id?>" class="btn btn-primary btn-sm" role="button"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="index.php?c=servico&a=delete&id=<?=$servico->id?>" class="btn btn-danger btn-sm" role="button"><i class="fas fa-trash"></i></a>
                         </td>
                     </tr>
                 <?php } ?>

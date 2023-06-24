@@ -12,6 +12,7 @@ class ServicoController extends Controller
 
         //mostrar a vista index passando os dados por parâmetro
         $this->renderView('servico', 'index', ['servicos' => $servicos]);
+
     }
 
     public function show($id)

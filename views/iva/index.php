@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?= constant('APP_NAME') ?> | Users</title>
+    <title><?= constant('APP_NAME') ?> | IVA</title>
 
     <link rel="stylesheet" href="public/plugins/fontawesome-free/css/all.min.css">
 
@@ -55,13 +55,17 @@
                 <tbody>
                 <?php foreach ($ivas as $iva) { ?>
                     <tr>
-                        <td class="text-center"><?= $iva->id ?></td>
+                        <td><?= $iva->id ?></td>
                         <td><?= $iva->percentagem ?></td>
                         <td><?= $iva->descricao ?></td>
-                        <td><?= $iva->vigor ?></td>
+                        <?php if($iva->vigor == 1) {?>
+                            <td>SIM</td>
+                        <?php } else { ?>
+                            <td>NÃO</td>
+                        <?php } ?>
                         <td>
-                            <a href="index.php?c=user&a=edit&id=<?=$iva->id?>" class="btn btn-primary btn-sm" role="button"><i class="fas fa-pencil-alt"></i></a>
-                            <a href="index.php?c=user&a=delete&id=<?=$iva->id?>" class="btn btn-danger btn-sm" role="button"><i class="fas fa-trash"></i></a>
+                            <a href="index.php?c=iva&a=edit&id=<?=$iva->id?>" class="btn btn-primary btn-sm" role="button"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="index.php?c=iva&a=delete&id=<?=$iva->id?>" class="btn btn-danger btn-sm" role="button"><i class="fas fa-trash"></i></a>
                         </td>
                     </tr>
                 <?php } ?>

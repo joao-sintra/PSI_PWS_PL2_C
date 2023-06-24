@@ -10,8 +10,13 @@ class Servico extends ActiveRecord\Model
     );
 
     static $has_many = array(
-        array('linhasobras')
+        array('linhaobras')
     );
+
+    static $belongs_to = array(
+        array('iva')
+    );
+
     static $validates_size_of = array(
         array('descricao', 'maximum' => 80, 'too_long' => 'Não deve ultrapassar os 80 carateres!'),
     );
