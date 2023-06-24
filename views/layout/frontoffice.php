@@ -107,13 +107,9 @@
         </a>
 
         <div class="sidebar">
-            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="user-panel mt-3 pb-1 mb-2 d-flex">
                 <div class="info">
-                    <a href="#" class="d-block"><?php if ($auth->isLoggedIn()) { ?>
-                            <a href="index.php?c=login&a=logout">Logout (<?= $auth->getUserName() ?>)</a>
-                        <?php } else { ?>
-                            <a href="index.php?c=login&a=index">Login</a>
-                        <?php } ?></a>
+                    <p class="text-light">Bem-vindo ao site WSGest.</p>
                 </div>
             </div>
             <nav class="mt-2">
@@ -121,7 +117,7 @@
                     data-accordion="false">
 
                     <li class="nav-item menu-open">
-                        <a href="#" class="nav-link active">
+                        <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>Dashboard</p>
                         </a>

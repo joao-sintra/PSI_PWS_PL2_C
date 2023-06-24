@@ -5,7 +5,7 @@
 
     <div class="card">
         <div class="card-body login-card-body">
-            <p class="login-box-msg">Sign in to start your session</p>
+            <p class="login-box-msg">Faça login para iniciar a sua sessão</p>
             <form action="index.php?c=login&a=login" method="post">
                 <div class="input-group mb-3">
                     <input type="text" name="username" class="form-control" placeholder="Username">
