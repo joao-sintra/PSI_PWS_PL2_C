@@ -12,11 +12,11 @@ class FolhaObra extends ActiveRecord\Model
     );
 
     static $validates_size_of = array(
-        array('Estado','maximum' => 20, 'too_long' => 'Não deve ultrapassar os 20 carateres!')
+        array('estado','maximum' => 20, 'too_long' => 'Não deve ultrapassar os 20 carateres!')
     );
 
     static $has_many = array(
-        array('linhaobras')
+        array('linhasobras')
     );
 
 }

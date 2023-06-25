@@ -31,50 +31,64 @@
                 <div class="invoice p-3 mb-3">
                     <!-- title row -->
                     <div class="row">
-                        <div class="col-12">
+                        <!--<div class="col-12">
                             <h4>
-                                <i class="fas fa-globe"></i> <?= constant('APP_NAME') ?>
-                                <small class="float-right">Data: <?= $dataFormatada ?></small>
+
+
                             </h4>
-                        </div>
+                        </div>-->
+                        <div class="col-4"><i class="fas fa-globe"></i> <?= constant('APP_NAME') ?></div>
+                        <div class="col-4">Dados do Cliente:</div>
+                        <div class="col-4"><h5 class="float-right">Data: <?= $dataFormatada ?></h5></div>
                         <!-- /.col -->
                     </div>
                     <!-- info row -->
                     <div class="row invoice-info">
                         <div class="col-sm-4 invoice-col">
-                            De
-                            <address>
-                                <strong><?= $empresa->designacaosocial ?></strong><br>
-                                <?= $empresa->morada ?>, <?= $empresa->codigopostal ?>, <?= $empresa->localidade ?><br>
-                                NIF: <?= $empresa->nif ?>, <br>
-                                Telefone: <?= $empresa->telefone ?><br>
-                                Email: <?= $empresa->email ?><br>
-                            </address>
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-sm-4 invoice-col">
-                            <?php if(!isset($users->id)) { ?>
-                            <address>
-                                Dados do Cliente:
 
-                                </address>
-                                <a href="index.php?c=folhaobra&a=selectcliente" class="btn btn-info"
-                                   role="button">Selecionar</a>
+                            <?php if (!isset($empresa->id)) { ?>
+
+                                <a href="index.php?c=empresa&a=create" class="btn btn-info"
+                                   role="button">Criar Empresa </i></a>
+
                             <?php } else { ?>
+
                                 <address>
-                                    Dados do Cliente:<br>
-                                    <strong><?= $users->username ?></strong><br>
-                                    <?= $users->morada ?><br>
-                                    <?= $users->localidade ?>, <?= $users->codigopostal ?><br>
-                                    Telefone: <?= $users->telefone ?><br>
-                                    Email: <?= $users->email ?><br>
+                                    <strong><?= $empresa->designacaosocial ?></strong><br>
+                                    <?= $empresa->morada ?>, <?= $empresa->codigopostal ?>, <?= $empresa->localidade ?>
+                                    <br>
+                                    NIF: <?= $empresa->nif ?>, <br>
+                                    Telefone: <?= $empresa->telefone ?><br>
+                                    Email: <?= $empresa->email ?><br>
                                 </address>
                             <?php } ?>
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-4 invoice-col">
-                            <b>Folha de obra #<?= $folhaObra->id+1 ?></b><br>
+                            <?php if (!isset($cliente->id)) { ?>
+                                <a href="index.php?c=folhaobra&a=selectcliente" class="btn btn-info"
+                                   role="button">Selecionar </i></a>
+                                <br>
+                                <br>
+                            <?php } else { ?>
+                                <address>
+                                    <strong><?= $cliente->username ?></strong><br>
+                                    <?= $cliente->morada ?><br>
+                                    <?= $cliente->localidade ?>, <?= $cliente->codigopostal ?><br>
+                                    Telefone: <?= $cliente->telefone ?><br>
+                                    Email: <?= $cliente->email ?><br>
+                                </address>
+                            <?php } ?>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-sm-4 invoice-col">
 
+                            <?php if (!isset($cliente->id, $folhaObra->id)) { ?>
+                                <b>Não há Folha de obra</b><br>
+
+                            <?php } else { ?>
+                                <b>Folha de obra #<?= $folhaObra->id +1 ?></b><br>
+                            <?php } ?>
 
                             <b>Pagamento até:</b> 10/06/2023<br>
 
@@ -94,12 +108,29 @@
                                     <th>Qtn.</th>
                                     <th>Pr. Uni.</th>
                                     <th>IVA Valor</th>
-                                    <th>Valor</th>
                                     <th>Subtotal</th>
                                 </tr>
                                 </thead>
+
+                                <?php foreach ($folhaObra->linhasobras as $linhasObras) { ?>
+                                    <tr>
+                                        <td><?= $linhasObras->servico->referencia ?></td>
+                                        <td><?= $linhasObras->servico->descricao ?></td>
+                                        <td><?= $linhasObras->quantidade ?></td>
+                                        <td><?= $linhasObras->servico->valorunitario ?></td>
+                                        <td><?= $linhasObras->servico->iva->percentagem ?></td>
+                                        <td><?= $subtotal = ($linhasObras->servico->valorunitario * $linhasObras->quantidade) ?></td>
+                                    </tr>
+                                <?php } ?>
                             </table>
-                            <br>
+
+                            <?php if ($folhaObra->id != 0) { ?>
+                                <h3><b>Criar uma nova Linha
+                                        de Obra&nbsp;</b><a href="index.php?c=linhaobra&a=create"
+                                                            class="btn btn-success" role="button"><i
+                                                class="fas fa-plus" style="color: #ffffff;"></i></a></h3>
+                                <br>
+                            <?php } ?>
                         </div>
                         <!-- /.col -->
                     </div>

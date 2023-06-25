@@ -8,7 +8,7 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 
-    <link rel="stylesheet" href="public/plugins/fontawesome-free/css/all.min.css">
+  <!--  <link rel="stylesheet" href="public/plugins/fontawesome-free/css/all.min.css">-->
 
     <link rel="stylesheet" href="public/css/adminlte.min.css?v=3.2.0">
     <script nonce="1cc656f9-f215-4d9a-851b-98e1d1c9a627">(function (w, d) {
@@ -125,66 +125,66 @@
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>Dashboard</p>
                         </a>
-                        <li class="nav-item">
-                            <a href="index.php?c=folhaobra&a=create&id=0" class="nav-link">
-                                <i class="fas fa-file-import nav-icon"></i>
-                                <p>Emitir FO</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="index.php?c=folhaobra&a=index" class="nav-link">
-                                <i class="far fa-check-circle nav-icon"></i>
-                                <p>FO Emitidas</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="index.php?c=cliente&a=index" class="nav-link">
-                                <i class="fas fa-user-plus nav-icon"></i>
-                                <p>Registo Clientes</p>
-                            </a>
-                        </li>
-                    </li>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="fas fa-server nav-icon"></i>
-                        <p>
-                            Gestão de Dados
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <?php if ($auth->isLoggedInAs($roles = ['admin'])) {?>
-                            <li class="nav-item">
-                                <a href="index.php?c=user&a=index" class="nav-link">
-                                    <i class="fas fa-users nav-icon"></i>
-                                    <p>Users</p>
-                                </a>
-                            </li>
-                        <?php } ?>
-
-                        <li class="nav-item">
-                            <a href="index.php?c=servico&a=index" class="nav-link">
-                                <i class="fas fa-file-alt nav-icon"></i>
-                                <p>Serviços</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="index.php?c=iva&a=index" class="nav-link">
-                                <i class="fas fa-tags nav-icon"></i>
-                                <p>IVA</p>
-                            </a>
-                        </li>
-                </li>
-                <?php if ($auth->isLoggedInAs($roles = ['admin'])) {?>
                     <li class="nav-item">
-                        <a href="index.php?c=empresa&a=index" class="nav-link">
-                            <i class="fas fa-building nav-icon"></i>
-                            <p>Empresa</p>
+                        <a href="index.php?c=folhaobra&a=create&id=0" class="nav-link">
+                            <i class="fas fa-file-import nav-icon"></i>
+                            <p>Emitir FO</p>
                         </a>
                     </li>
-                <?php } ?>
-                </li>
+                    <li class="nav-item">
+                        <a href="index.php?c=folhaobra&a=index" class="nav-link">
+                            <i class="far fa-check-circle nav-icon"></i>
+                            <p>FO Emitidas</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.php?c=cliente&a=index" class="nav-link">
+                            <i class="fas fa-user-plus nav-icon"></i>
+                            <p>Registo Clientes</p>
+                        </a>
+                    </li>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-server nav-icon"></i>
+                            <p>
+                                Gestão de Dados
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <?php if ($auth->isLoggedInAs($roles = ['admin'])) { ?>
+                                <li class="nav-item">
+                                    <a href="index.php?c=user&a=index" class="nav-link">
+                                        <i class="fas fa-users nav-icon"></i>
+                                        <p>Users</p>
+                                    </a>
+                                </li>
+                            <?php } ?>
+
+                            <li class="nav-item">
+                                <a href="index.php?c=servico&a=index" class="nav-link">
+                                    <i class="fas fa-file-alt nav-icon"></i>
+                                    <p>Serviços</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="index.php?c=iva&a=index" class="nav-link">
+                                    <i class="fas fa-tags nav-icon"></i>
+                                    <p>IVA</p>
+                                </a>
+                            </li>
+                    </li>
+                    <?php if ($auth->isLoggedInAs($roles = ['admin'])) { ?>
+                        <li class="nav-item">
+                            <a href="index.php?c=empresa&a=index" class="nav-link">
+                                <i class="fas fa-building nav-icon"></i>
+                                <p>Empresa</p>
+                            </a>
+                        </li>
+                    <?php } ?>
+                    </li>
                 </ul>
                 </li>
                 </ul>
@@ -202,19 +202,19 @@
 </div>
 
 
-    <aside class="control-sidebar control-sidebar-dark">
+<aside class="control-sidebar control-sidebar-dark">
 
-        <div class="p-3">
-            <h5>Title</h5>
-            <p>Sidebar content</p>
-        </div>
-    </aside>
+    <div class="p-3">
+        <h5>Title</h5>
+        <p>Sidebar content</p>
+    </div>
+</aside>
 
 
-  </div>
+</div>
 
 <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href=""><?= constant('APP_NAME') ?></a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2022-2023 <a href=""><?= constant('APP_NAME') ?></a>.</strong> All rights reserved.
     <div class="float-right d-none d-sm-inline">
         Anything you want
     </div>
@@ -227,5 +227,7 @@
 <script src="public/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <script src="public/js/adminlte.min.js?v=3.2.0"></script>
+
+<script src="https://kit.fontawesome.com/4b6b90e707.js"></script>
 </body>
 </html>

@@ -78,5 +78,13 @@ class EmpresaController extends Controller
             $this->renderView('empresa', 'edit', ['empresa' => $empresa]);
         }
     }
+    public function delete($id)
+    {
+        $empresa = Empresa::find($id);
+        $empresa->delete();
+
+        //redirecionar para o index
+        $this->redirectToRoute('empresa', 'index');
+    }
 
 }

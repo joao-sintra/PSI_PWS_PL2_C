@@ -16,7 +16,8 @@
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="index.php?c=folhaobra&a=create&id=0">Emitir Folha de Obra</a></li>
+                    <li class="breadcrumb-item"><a href="index.php?c=folhaobra&a=create&id=0">Emitir Folha de Obra</a>
+                    </li>
                     <li class="breadcrumb-item active">Selecionar cliente</li>
                 </ol>
             </div>
@@ -29,7 +30,8 @@
             <h3 class="card-title">Selecione um cliente para a Folha de Obra</h3>
             <div class="card-tools">
                 <div class="input-group input-group-sm" style="width: 200px;">
-                    <input type="text" name="table_search" class="form-control float-left" placeholder="Pesquisar clientes...">
+                    <input type="text" name="table_search" class="form-control float-left"
+                           placeholder="Pesquisar clientes...">
                     <div class="input-group-append">
                         <button type="submit" class="btn btn-default">
                             <i class="fas fa-search"></i>
@@ -54,7 +56,9 @@
                         <td><?= $clientes->username ?></td>
                         <td><?= $clientes->nif ?></td>
                         <td>
-                            <a href="index.php?c=folhaobra&a=create&id=<?= $clientes->id ?>" class="btn btn-success btn-sm" role="button">SELECIONAR</a>
+                            <form action="index.php?c=folhaobra&a=store&idCliente=<?= $clientes->id ?>"method="POST">
+                                <input type="submit" value="Selecionar" class="btn btn-success btn-sm" role="button">
+                            </form>
                         </td>
                     </tr>
                 <?php } ?>

@@ -33,46 +33,52 @@
 
         <div class="card-body table-responsive p-0" style="height: 450px;">
             <table class="table table-head-fixed text-nowrap">
-                <?php if(COUNT($empresas) == 0) { ?>
-                <div class="card-body">
+                <?php if (COUNT($empresas) == 0) { ?>
+                    <div class="card-body">
                         <div class="card-title">
-                            <h3><b>Criar empresa</h3></b></h3> &ensp; <a href="index.php?c=empresa&a=create" class="btn btn-success" role="button"><i class="fas fa-plus" style="color: #ffffff;"></i></a>
+                            <h3><b>Criar empresa</h3></b></h3> &ensp; <a href="index.php?c=empresa&a=create"
+                                                                         class="btn btn-success" role="button"><i
+                                        class="fas fa-plus" style="color: #ffffff;"></i></a>
+
+
                         </div>
-                </div>
+                    </div>
                 <?php } else { ?>
-                    <thead>
-                        <tr>
-                            <th>Nº Empresa</th>
-                            <th>Designação Social</th>
-                            <th>Email</th>
-                            <th>Telefone</th>
-                            <th>NIF</th>
-                            <th>Morada</th>
-                            <th>Código Postal</th>
-                            <th>Localidade</th>
-                            <th>Capital Social</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
+                <thead>
+                <tr>
+                    <th>Nº Empresa</th>
+                    <th>Designação Social</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>NIF</th>
+                    <th>Morada</th>
+                    <th>Código Postal</th>
+                    <th>Localidade</th>
+                    <th>Capital Social</th>
+                    <th>Ações</th>
+                </tr>
+                </thead>
                 <tbody>
-                    <?php foreach ($empresas as $empresa) { ?>
-                        <tr>
-                            <td class="text-center"><?= $empresa->id ?></td>
-                            <td><?= $empresa->designacaosocial ?></td>
-                            <td><?= $empresa->email ?></td>
-                            <td><?= $empresa->telefone ?></td>
-                            <td><?= $empresa->nif ?></td>
-                            <td><?= $empresa->morada ?></td>
-                            <td><?= $empresa->codigopostal ?></td>
-                            <td><?= $empresa->localidade ?></td>
-                            <td><?= $empresa->capitalsocial ?></td>
-                            <td>
-                                <a href="index.php?c=empresa&a=show&id=<?=$empresa->id?>" class="btn btn-warning btn-sm" role="button"><i class="fas fa-eye" style="color: #ffffff;"></i></a>
-                                <a href="index.php?c=empresa&a=edit&id=<?=$empresa->id?>" class="btn btn-primary btn-sm" role="button"><i class="fas fa-pencil-alt"></i></a>
-                            </td>
-                        </tr>
-                    <?php }
-                        } ?>
+                <?php foreach ($empresas as $empresa) { ?>
+                    <tr>
+                        <td class="text-center"><?= $empresa->id ?></td>
+                        <td><?= $empresa->designacaosocial ?></td>
+                        <td><?= $empresa->email ?></td>
+                        <td><?= $empresa->telefone ?></td>
+                        <td><?= $empresa->nif ?></td>
+                        <td><?= $empresa->morada ?></td>
+                        <td><?= $empresa->codigopostal ?></td>
+                        <td><?= $empresa->localidade ?></td>
+                        <td><?= $empresa->capitalsocial ?></td>
+                        <td>
+                            <a href="index.php?c=empresa&a=show&id=<?= $empresa->id ?>" class="btn btn-warning btn-sm"
+                               role="button"><i class="fas fa-eye" style="color: #ffffff;"></i></a>
+                            <a href="index.php?c=empresa&a=edit&id=<?= $empresa->id ?>" class="btn btn-primary btn-sm"
+                               role="button"><i class="fas fa-pencil-alt"></i></a>
+                        </td>
+                    </tr>
+                <?php }
+                } ?>
                 </tbody>
             </table>
         </div>
