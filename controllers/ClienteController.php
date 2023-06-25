@@ -6,6 +6,12 @@
 
 class ClienteController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->authenticationFilterAllows($roles = ['admin','funcionario']);
+    }
+
     public function index()
     {
         $clientes = User::find('all', array('conditions' => array('role = ?', 'cliente')));

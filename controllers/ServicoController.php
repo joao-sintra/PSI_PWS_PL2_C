@@ -5,6 +5,10 @@ require_once 'controllers/Controller.php';
 
 class ServicoController extends Controller
 {
+    public function __construct()
+    {
+        $this->authenticationFilterAllows($roles = ['admin','funcionario']);
+    }
 
     public function index()
     {

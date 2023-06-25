@@ -7,6 +7,11 @@ require_once 'controllers/Controller.php';
 
 class LinhaObraController extends Controller
 {
+    public function __construct()
+    {
+        $this->authenticationFilterAllows($roles = ['admin','funcionario']);
+    }
+
     public function index()
     {
         //mostrar a vista index passando os dados por parâmetro

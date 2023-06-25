@@ -7,6 +7,12 @@ require_once 'models/FolhaObra.php';
 
 class FolhaObraController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->authenticationFilterAllows($roles = ['admin','funcionario']);
+    }
+
     public function create($id)
     {
         $data = Carbon::Now();

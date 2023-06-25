@@ -5,6 +5,11 @@
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->authenticationFilterAllows($roles = ['funcionario']);
+    }
+
     public function index()
     {
         $users = User::find('all', array('conditions' => array('role = ?', 'funcionario')));

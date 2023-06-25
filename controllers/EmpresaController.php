@@ -5,6 +5,12 @@ require_once 'controllers/Controller.php';
 
 class EmpresaController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->authenticationFilterAllows($roles = ['admin']);
+    }
+
     public function index()
     {
         $empresas = Empresa::all();
