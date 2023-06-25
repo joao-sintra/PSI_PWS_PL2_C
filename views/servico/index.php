@@ -62,6 +62,7 @@
                         <td><?= $servico->valorunitario ?></td>
                         <td><?= $servico->iva->percentagem?>%</td>
                         <td>
+                            <a href="index.php?c=servico&a=show&id=<?=$servico->id?>" class="btn btn-warning btn-sm" role="button"><i class="fas fa-eye" style="color: #ffffff;"></i></a>
                             <a href="index.php?c=servico&a=edit&id=<?=$servico->id?>" class="btn btn-primary btn-sm" role="button"><i class="fas fa-pencil-alt"></i></a>
                             <a href="index.php?c=servico&a=delete&id=<?=$servico->id?>" class="btn btn-danger btn-sm" role="button"><i class="fas fa-trash"></i></a>
                         </td>

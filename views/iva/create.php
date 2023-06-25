@@ -17,7 +17,7 @@
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="index.php?c=iva&a=index">Registo IVAs</a></li>
+                    <li class="breadcrumb-item"><a href="index.php?c=iva&a=index">IVA</a></li>
                     <li class="breadcrumb-item active">Criar Novo IVA</li>
                 </ol>
             </div>
