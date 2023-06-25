@@ -7,7 +7,7 @@ class UserController extends Controller
 {
     public function __construct()
     {
-        $this->authenticationFilterAllows($roles = ['funcionario']);
+        $this->authenticationFilterAllows($roles = ['admin']);
     }
 
     public function index()

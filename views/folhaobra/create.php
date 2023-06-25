@@ -83,12 +83,7 @@
                         <!-- /.col -->
                         <div class="col-sm-4 invoice-col">
 
-                            <?php if (!isset($cliente->id, $folhaObra->id)) { ?>
-                                <b>Não há Folha de obra</b><br>
-
-                            <?php } else { ?>
-                                <b>Folha de obra #<?= $folhaObra->id +1 ?></b><br>
-                            <?php } ?>
+                            <b>Folha de obra #<?= $folhaObra->id+1?></b><br>
 
                             <b>Pagamento até:</b> 10/06/2023<br>
 
@@ -111,17 +106,9 @@
                                     <th>Subtotal</th>
                                 </tr>
                                 </thead>
+                                <!--
 
-                                <?php foreach ($folhaObra->linhasobras as $linhasObras) { ?>
-                                    <tr>
-                                        <td><?= $linhasObras->servico->referencia ?></td>
-                                        <td><?= $linhasObras->servico->descricao ?></td>
-                                        <td><?= $linhasObras->quantidade ?></td>
-                                        <td><?= $linhasObras->servico->valorunitario ?></td>
-                                        <td><?= $linhasObras->servico->iva->percentagem ?></td>
-                                        <td><?= $subtotal = ($linhasObras->servico->valorunitario * $linhasObras->quantidade) ?></td>
-                                    </tr>
-                                <?php } ?>
+                                -->
                             </table>
 
                             <?php if ($folhaObra->id != 0) { ?>

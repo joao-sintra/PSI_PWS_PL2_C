@@ -46,7 +46,7 @@
                 <thead>
                 <tr>
                     <th>Nº IVA</th>
-                    <th>Percentagem</th>
+                    <th>Percentagem (%)</th>
                     <th>Descrição</th>
                     <th>Vigor</th>
                     <th>Ações</th>
@@ -64,6 +64,7 @@
                             <td>NÃO</td>
                         <?php } ?>
                         <td>
+                            <a href="index.php?c=iva&a=show&id=<?=$iva->id?>" class="btn btn-warning btn-sm" role="button"><i class="fas fa-eye" style="color: #ffffff;"></i></a>
                             <a href="index.php?c=iva&a=edit&id=<?=$iva->id?>" class="btn btn-primary btn-sm" role="button"><i class="fas fa-pencil-alt"></i></a>
                             <a href="index.php?c=iva&a=delete&id=<?=$iva->id?>" class="btn btn-danger btn-sm" role="button"><i class="fas fa-trash"></i></a>
                         </td>

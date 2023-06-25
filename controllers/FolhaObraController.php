@@ -23,13 +23,11 @@ class FolhaObraController extends Controller
 
 
         if ($id == 0) {
-            $this->renderView('folhaobra', 'create', ['dataFormatada' => $dataFormatada, 'folhaObra' => $folhaObra, 'empresa' => $empresa]);
+           $this->renderView('folhaobra', 'create', ['dataFormatada' => $dataFormatada, 'folhaObra' => $folhaObra, 'empresa' => $empresa]);
 
         } else {
 
-            $folhaObra = FolhaObra::find($id);
-
-            $cliente = User::find($folhaObra->cliente_id);
+            $cliente = User::find($id);
 
 
             $this->renderView('folhaobra', 'create', ['cliente' => $cliente, 'dataFormatada' => $dataFormatada , 'folhaObra' => $folhaObra, 'empresa' => $empresa]);
@@ -66,9 +64,9 @@ class FolhaObraController extends Controller
 
 
         else {
-            $linhasObra = LinhasObra::all();
+            $linhaObras = LinhasObra::all();
 
-            $this->renderView('folhaobra', 'create', ['folhaObra' => $folhaObra, 'linhasObra' => $linhasObra]);
+            $this->renderView('folhaobra', 'create', ['folhaObra' => $folhaObra, 'linhaObras' => $linhaObras]);
         }
 
 

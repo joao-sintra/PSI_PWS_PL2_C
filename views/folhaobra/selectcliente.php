@@ -56,9 +56,7 @@
                         <td><?= $clientes->username ?></td>
                         <td><?= $clientes->nif ?></td>
                         <td>
-                            <form action="index.php?c=folhaobra&a=store&idCliente=<?= $clientes->id ?>"method="POST">
-                                <input type="submit" value="Selecionar" class="btn btn-success btn-sm" role="button">
-                            </form>
+                             <a href="index.php?c=folhaobra&a=create&id=<?= $clientes->id ?>" class="btn btn-success btn-sm">SELECIONAR</a>
                         </td>
                     </tr>
                 <?php } ?>

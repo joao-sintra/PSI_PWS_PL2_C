@@ -32,47 +32,44 @@
                 <h3 class="card-title">Visualizar Informações do User</h3>
             </div>
 
-
-            <form action='index.php?c=user&a=update&id=<?=$user->id?>' method="POST">
-                <div class="card-body">
-                    <div class="form-group">
-                        <label for="username">Nome </label>
-                        <input type="text" disabled class="form-control" value="<?=$user -> username?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="text" disabled class="form-control" value="<?=$user -> password?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email </label>
-                        <input type="email" disabled class="form-control" value="<?=$user -> email?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="telefone">Telefone </label>
-                        <input type="text" disabled class="form-control" value="<?=$user -> telefone?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="nif">NIF </label>
-                        <input type="text" disabled class="form-control" value="<?=$user -> nif?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="morada">Morada </label>
-                        <input type="text" disabled class="form-control" value="<?=$user -> morada?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="codigopostal">Código Postal </label>
-                        <input type="text" disabled class="form-control" value="<?=$user -> codigopostal?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="localidade">Localidade </label>
-                        <input type="text" disabled class="form-control" value="<?=$user -> localidade?>">
-                    </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="username">Nome </label>
+                    <input type="text" disabled class="form-control" value="<?=$user -> username?>">
                 </div>
-
-                <div class="card-footer">
-                    <a href="index.php?c=user&a=index" class="btn btn-success" role="button">VOLTAR</i></a>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="text" disabled class="form-control" value="<?=$user -> password?>">
                 </div>
-            </form>
+                <div class="form-group">
+                    <label for="email">Email </label>
+                    <input type="email" disabled class="form-control" value="<?=$user -> email?>">
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone </label>
+                    <input type="text" disabled class="form-control" value="<?=$user -> telefone?>">
+                </div>
+                <div class="form-group">
+                    <label for="nif">NIF </label>
+                    <input type="text" disabled class="form-control" value="<?=$user -> nif?>">
+                </div>
+                <div class="form-group">
+                    <label for="morada">Morada </label>
+                    <input type="text" disabled class="form-control" value="<?=$user -> morada?>">
+                </div>
+                <div class="form-group">
+                    <label for="codigopostal">Código Postal </label>
+                    <input type="text" disabled class="form-control" value="<?=$user -> codigopostal?>">
+                </div>
+                <div class="form-group">
+                    <label for="localidade">Localidade </label>
+                    <input type="text" disabled class="form-control" value="<?=$user -> localidade?>">
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="index.php?c=user&a=index" class="btn btn-success" role="button">VOLTAR</i></a>
+            </div>
         </div>
     </div>
 </div>

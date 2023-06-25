@@ -68,7 +68,9 @@ class IvaController extends Controller
 
     public function update($id)
     {
+
         $iva = Iva::find($id);
+
         $iva->update_attributes($this->getHTTPPost());
 
         if ($iva->is_valid()) {
