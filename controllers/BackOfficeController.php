@@ -9,8 +9,11 @@ class BackOfficeController extends Controller
 
     public function index()
     {
-        $this->renderView('backoffice', 'index');
-    }
+        $users = User::all();
+        $servicos = Servico::all();
+        $ivas = Iva::all();
 
+        $this->renderView('backoffice', 'index', ['users' => $users, 'servicos' => $servicos, 'ivas' => $ivas]);
+    }
 }
 

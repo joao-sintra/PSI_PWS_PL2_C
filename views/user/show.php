@@ -65,6 +65,10 @@
                     <label for="localidade">Localidade </label>
                     <input type="text" disabled class="form-control" value="<?=$user -> localidade?>">
                 </div>
+                <div class="form-group">
+                    <label for="role">Role </label>
+                    <input type="text" disabled class="form-control" value="<?=$user -> role?>">
+                </div>
             </div>
 
             <div class="card-footer">

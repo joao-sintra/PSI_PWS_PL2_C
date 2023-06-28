@@ -100,8 +100,12 @@
                         }?>
                     </div>
                     <div class="form-group">
-
-                        <input type="hidden" readonly="readonly" name="role" class="form-control" value="funcionario">
+                        <label for="role">Role</label><br>
+                        <select name="role" id="role">
+                            <option value="admin">Administrador</option>
+                            <option value="funcionario">Funcionário</option>
+                            <option value="cliente">Cliente</option>
+                        </select>
                     </div>
                 </div>
 

@@ -53,6 +53,7 @@
                     <th>Morada</th>
                     <th>Código Postal</th>
                     <th>Localidade</th>
+                    <th>Role</th>
                     <th>Ações</th>
                 </tr>
                 </thead>
@@ -67,6 +68,7 @@
                         <td><?= $user->morada ?></td>
                         <td><?= $user->codigopostal ?></td>
                         <td><?= $user->localidade ?></td>
+                        <td><?= $user->role ?></td>
                         <td>
                             <a href="index.php?c=user&a=show&id=<?=$user->id?>" class="btn btn-warning btn-sm" role="button"><i class="fas fa-eye" style="color: #ffffff;"></i></a>
                             <a href="index.php?c=user&a=edit&id=<?=$user->id?>" class="btn btn-primary btn-sm" role="button"><i class="fas fa-pencil-alt"></i></a>
