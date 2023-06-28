@@ -55,12 +55,24 @@
                         <label for="vigor">Vigor </label>
                         <input type="checkbox" class="form-control"  value="<?php if(isset($iva)) { echo
                         $iva->vigor; }?>">
+                        <input type="hidden" class="form-control" id="vigor" name="vigor"  value="0">
+
+                        <script>
+                            function changeInputValue() {
+                                var cb = document.getElementById("Cbvigor");
+                                var vigor = document.getElementById("vigor");
+
+                                if (cb.checked)
+                                    vigor.value = "1";
+                                console.log(vigor.value);
+                            }
+                        </script>
                     </div>
                 </div>
 
                 <div class="card-footer">
                     <a href="index.php?c=iva&a=index" class="btn btn-danger" role="button">CANCELAR</i></a>
-                    <input class="btn btn-primary" type="submit" value="CRIAR">
+                    <input class="btn btn-primary" type="submit" value="CRIAR" onclick="changeInputValue()">
                 </div>
             </form>
         </div>

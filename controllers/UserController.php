@@ -12,7 +12,8 @@ class UserController extends Controller
 
     public function index()
     {
-        $users = User::find('all', array('conditions' => array('role = ?', 'funcionario')));
+        //$users = User::find('all', array('conditions' => array('role = ?', 'funcionario')));
+        $users = User::all();
 
         //mostrar a vista index passando os dados por parâmetro
         $this->renderView('user', 'index', ['users' => $users]);

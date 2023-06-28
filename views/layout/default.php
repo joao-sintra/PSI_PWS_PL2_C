@@ -199,6 +199,14 @@
         <?php require_once($viewPath); ?>
 
     </div>
+    <footer class="main-footer">
+        <strong>Copyright &copy; 2022-2023 <a href=""><?= constant('APP_NAME') ?></a>.</strong> All rights reserved.
+        <div class="float-right d-none d-sm-inline">
+            IPL-ESTG
+        </div>
+
+
+    </footer>
 </div>
 
 
@@ -213,14 +221,8 @@
 
 </div>
 
-<footer class="main-footer">
-    <strong>Copyright &copy; 2022-2023 <a href=""><?= constant('APP_NAME') ?></a>.</strong> All rights reserved.
-    <div class="float-right d-none d-sm-inline">
-        Anything you want
-    </div>
 
 
-</footer>
 
 <script src="public/plugins/jquery/jquery.min.js"></script>
 

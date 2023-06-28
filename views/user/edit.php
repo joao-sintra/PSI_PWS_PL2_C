@@ -164,8 +164,33 @@
                         </p>
                     </div>
                     <div class="form-group">
+                        <label for="role">Role</label><br>
+                        <?php switch ($user->role) {
+                            case 'admin': ?>
+                                <select name="role" id="role">
+                                    <option value="admin">Administrador</option>
+                                    <option value="funcionario">Funcionário</option>
+                                    <option value="cliente">Cliente</option>
+                                </select>
+                            <?php break;
 
-                        <input type="hidden" readonly="readonly" name="role" class="form-control" value="funcionario">
+                            case 'funcionario': ?>
+                                <select name="role" id="role">
+                                    <option value="funcionario">Funcionário</option>
+                                    <option value="admin">Administrador</option>
+                                    <option value="cliente">Cliente</option>
+                                </select>
+                                <?php break;
+
+                            case 'cliente': ?>
+                                <select name="role" id="role">
+                                    <option value="cliente">Cliente</option>
+                                    <option value="admin">Administrador</option>
+                                    <option value="funcionario">Funcionário</option>
+                                </select>
+                            <?php break;
+                        } ?>
+
                     </div>
                 </div>
 
