@@ -11,10 +11,17 @@ A aplicação permite também a inserção e gestão dos dados necessários para
 # Requisitos
 Windows 7+ (64bit)
 
+# Credenciais
+Nome: admin 
+
+Senha: 123
+
+Repositório: https://github.com/joao-sintra/PSI_PWS_PL2_C
 
 # Autores 
  * @Rúben Amaral, nº 2220848
  * @João Sintra, nº 2220865
  * @Francisco Furtado, nº 2220870
+   
 
 > Programação Web Servidor @ 2023
