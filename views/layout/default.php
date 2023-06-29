@@ -66,28 +66,6 @@
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
 
         <ul class="navbar-nav ml-auto">
-
-            <li class="nav-item">
-                <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-                    <i class="fas fa-search"></i>
-                </a>
-                <div class="navbar-search-block">
-                    <form class="form-inline">
-                        <div class="input-group input-group-sm">
-                            <input class="form-control form-control-navbar" type="search" placeholder="Search"
-                                   aria-label="Search">
-                            <div class="input-group-append">
-                                <button class="btn btn-navbar" type="submit">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                                    <i class="fas fa-times"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </li>
             <li class="nav-item">
                 <a class="nav-link" data-widget="fullscreen" href="#" role="button">
                     <i class="fas fa-expand-arrows-alt"></i>
@@ -126,13 +104,13 @@
                             <p>Dashboard</p>
                         </a>
                     <li class="nav-item">
-                        <a href="index.php?c=folhaobra&a=create&id=0" class="nav-link">
+                        <a href="index.php?c=folhaobra&a=create&id_cliente=0&id_folhaobra=0" class="nav-link">
                             <i class="fas fa-file-import nav-icon"></i>
                             <p>Emitir FO</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="index.php?c=folhaobra&a=index" class="nav-link">
+                        <a href="index.php?c=folhaobra&a=show" class="nav-link">
                             <i class="far fa-check-circle nav-icon"></i>
                             <p>FO Emitidas</p>
                         </a>
@@ -175,6 +153,14 @@
                                     <p>IVA</p>
                                 </a>
                             </li>
+                            <?php if ($auth->isLoggedInAs($roles = ['funcionario'])) { ?>
+                            <li class="nav-item">
+                                <a href="index.php?c=user&a=dadosfuncionario" class="nav-link">
+                                    <i class="fas fa-user-shield nav-icon"></i>
+                                    <p>Dados Pessoais</p>
+                                </a>
+                            </li>
+                            <?php } ?>
                     </li>
                     <?php if ($auth->isLoggedInAs($roles = ['admin'])) { ?>
                         <li class="nav-item">

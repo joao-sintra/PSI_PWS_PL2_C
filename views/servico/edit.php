@@ -68,7 +68,7 @@
                     </div>
                     <div class="form-group">
                         <label for="valorunitario">Valor Unitário</label>
-                        <input type="text" class="form-control" id="valorunitario" name="valorunitario" placeholder="Introduza a valor unitário..." value="<?=$servico -> valorunitario?>">
+                        <input type="number" class="form-control" id="valorunitario" name="valorunitario" placeholder="Introduza a valor unitário..." value="<?=$servico -> valorunitario?>">
                         <p><?php
                             if(isset($servico->errors)) {
                                 if (is_array($servico->errors->on('valorunitario'))) {

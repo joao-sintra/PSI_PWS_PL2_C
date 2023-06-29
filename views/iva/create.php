@@ -37,7 +37,7 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="percentagem">Percentagem </label>
-                        <input type="text" class="form-control" id="percentagem" name="percentagem" placeholder="Introduza o percentagem..." value="<?php if(isset($iva)) {
+                        <input type="number" class="form-control" id="percentagem" name="percentagem" placeholder="Introduza o percentagem..." value="<?php if(isset($iva)) {
                             echo $iva->percentagem; }?>">
                         <?php if(isset($iva->errors)){
                             echo $iva->errors->on('percentagem');

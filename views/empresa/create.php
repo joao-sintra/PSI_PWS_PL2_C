@@ -53,7 +53,7 @@
                     </div>
                     <div class="form-group">
                         <label for="telefone">Telefone </label>
-                        <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Introduza o telefone..." value="<?php if(isset($empresa)) { echo
+                        <input type="number" class="form-control" id="telefone" name="telefone" placeholder="Introduza o telefone..." value="<?php if(isset($empresa)) { echo
                         $empresa->telefone; }?>">
                         <?php if(isset($empresa->errors)){
                             echo $empresa->errors->on('telefone');
@@ -61,7 +61,7 @@
                     </div>
                     <div class="form-group">
                         <label for="nif">NIF </label>
-                        <input type="text" class="form-control" id="nif" name="nif" placeholder="Introduza o NIF..." value="<?php if(isset($empresa)) { echo
+                        <input type="number" class="form-control" id="nif" name="nif" placeholder="Introduza o NIF..." value="<?php if(isset($empresa)) { echo
                         $empresa->nif; }?>">
                         <?php if(isset($empresa->errors)){
                             echo $empresa->errors->on('nif');
@@ -93,7 +93,7 @@
                     </div>
                     <div class="form-group">
                         <label for="capitalsocial">Capital Social </label>
-                        <input type="text" class="form-control" id="capitalsocial" name="capitalsocial" placeholder="Introduza a capital social..." value="<?php if(isset($empresa)) { echo
+                        <input type="number" class="form-control" id="capitalsocial" name="capitalsocial" placeholder="Introduza a capital social..." value="<?php if(isset($empresa)) { echo
                         $empresa->capitalsocial; }?>">
                         <?php if(isset($empresa->errors)){
                             echo $empresa->errors->on('capitalsocial');

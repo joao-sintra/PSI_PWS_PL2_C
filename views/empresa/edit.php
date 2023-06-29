@@ -33,7 +33,7 @@
             </div>
 
 
-            <form action='index.php?c=user&a=update&id=<?=$empresa->id?>' method="POST">
+            <form action='index.php?c=empresa&a=update&id=<?=$empresa->id?>' method="POST">
                 <div class="card-body">
                     <div class="form-group">
                         <label for="designacaosocial">Designação Social </label>
@@ -69,7 +69,7 @@
                     </div>
                     <div class="form-group">
                         <label for="telefone">Telefone </label>
-                        <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Introduza o telefone..." value="<?=$empresa -> telefone?>">
+                        <input type="number" class="form-control" id="telefone" name="telefone" placeholder="Introduza o telefone..." value="<?=$empresa -> telefone?>">
                         <p><?php
                             if(isset($empresa->errors)) {
                                 if (is_array($empresa->errors->on('telefone'))) {
@@ -85,7 +85,7 @@
                     </div>
                     <div class="form-group">
                         <label for="nif">NIF </label>
-                        <input type="text" class="form-control" id="nif" name="nif" placeholder="Introduza o NIF..." value="<?=$empresa -> nif?>">
+                        <input type="number" class="form-control" id="nif" name="nif" placeholder="Introduza o NIF..." value="<?=$empresa -> nif?>">
                         <p><?php
                             if(isset($empresa->errors)) {
                                 if (is_array($empresa->errors->on('nif'))) {
@@ -149,7 +149,7 @@
                     </div>
                     <div class="form-group">
                         <label for="capitalsocial">Capital Social</label>
-                        <input type="text" class="form-control" id="capitalsocial" name="capitalsocial" placeholder="Introduza a capital social..." value="<?=$empresa -> capitalsocial?>">
+                        <input type="number" class="form-control" id="capitalsocial" name="capitalsocial" placeholder="Introduza a capital social..." value="<?=$empresa -> capitalsocial?>">
                         <p><?php
                             if(isset($empresa->errors)) {
                                 if (is_array($empresa->errors->on('capitalsocial'))) {

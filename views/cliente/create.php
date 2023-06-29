@@ -61,7 +61,7 @@
                         </div>
                         <div class="form-group">
                             <label for="telefone">Telefone </label>
-                            <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Introduza o telefone..." value="<?php if(isset($cliente)) { echo
+                            <input type="number" class="form-control" id="telefone" name="telefone" placeholder="Introduza o telefone..." value="<?php if(isset($cliente)) { echo
                             $cliente->telefone; }?>">
                             <?php if(isset($cliente->errors)){
                                 echo $cliente->errors->on('telefone');
@@ -69,7 +69,7 @@
                         </div>
                         <div class="form-group">
                             <label for="nif">NIF </label>
-                            <input type="text" class="form-control" id="nif" name="nif" placeholder="Introduza o NIF..." value="<?php if(isset($cliente)) { echo
+                            <input type="number" class="form-control" id="nif" name="nif" placeholder="Introduza o NIF..." value="<?php if(isset($cliente)) { echo
                             $cliente->nif; }?>">
                             <?php if(isset($cliente->errors)){
                                 echo $cliente->errors->on('nif');

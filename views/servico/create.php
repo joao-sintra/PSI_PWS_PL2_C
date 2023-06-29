@@ -37,7 +37,7 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="referencia">Referência </label>
-                        <input type="text" class="form-control" id="referencia" name="referencia" placeholder="Introduza o referência..." value="<?php if(isset($servico)) {
+                        <input type="number" class="form-control" id="referencia" name="referencia" placeholder="Introduza o referência..." value="<?php if(isset($servico)) {
                             echo $servico->referencia; }?>">
                         <?php if(isset($servico->errors)){
                             echo $servico->errors->on('referencia');
@@ -53,8 +53,8 @@
                     </div>
                     <div class="form-group">
                         <label for="valorunitario">Valor Unitário</label>
-                        <input type="text" class="form-control" id="valorunitario" name="valorunitario" placeholder="Introduza a valor unitário..." value="<?php if(isset($servico)) { echo
-                        $servico->valorunitario; }?>">
+                        <input type="number" class="form-control" id="valorunitario" name="valorunitario" placeholder="Introduza a valor unitário..." value="<?php if(isset($servico)) { echo
+                        $servico->valorunitario; }?>1">
                         <?php if(isset($servico->errors)){
                             echo $servico->errors->on('valorunitario');
                         }?>
@@ -76,6 +76,8 @@
                     <input class="btn btn-info" type="submit" value="CRIAR">
                 </div>
             </form>
+
+
         </div>
     </div>
 </div>

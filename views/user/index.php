@@ -31,7 +31,8 @@
             <h3 class="card-title ">Registo de Users</h3>
             <div class="card-tools">
                 <div class="input-group input-group-sm" style="width: 200px;">
-                    <input type="text" name="table_search" class="form-control float-left" placeholder="Pesquisar users...">
+                    <input type="text" name="table_search" class="form-control float-left"
+                           placeholder="Pesquisar users...">
                     <div class="input-group-append">
                         <button type="submit" class="btn btn-default">
                             <i class="fas fa-search"></i>
@@ -58,24 +59,42 @@
                 </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($users as $user) { ?>
-                    <tr>
-                        <td class="text-center"><?= $user->id ?></td>
-                        <td><?= $user->username ?></td>
-                        <td><?= $user->email ?></td>
-                        <td><?= $user->telefone ?></td>
-                        <td><?= $user->nif ?></td>
-                        <td><?= $user->morada ?></td>
-                        <td><?= $user->codigopostal ?></td>
-                        <td><?= $user->localidade ?></td>
-                        <td><?= $user->role ?></td>
-                        <td>
-                            <a href="index.php?c=user&a=show&id=<?=$user->id?>" class="btn btn-warning btn-sm" role="button"><i class="fas fa-eye" style="color: #ffffff;"></i></a>
-                            <a href="index.php?c=user&a=edit&id=<?=$user->id?>" class="btn btn-primary btn-sm" role="button"><i class="fas fa-pencil-alt"></i></a>
-                            <a href="index.php?c=user&a=delete&id=<?=$user->id?>" class="btn btn-danger btn-sm" role="button"><i class="fas fa-trash"></i></a>
-                        </td>
-                    </tr>
-                <?php } ?>
+                <?php foreach ($users as $user) {
+                    if ($user->role != 'cliente') {
+                        ?>
+                        <tr>
+                            <td class="text-center"><?= $user->id ?></td>
+                            <td><?= $user->username ?></td>
+                            <td><?= $user->email ?></td>
+                            <td><?= $user->telefone ?></td>
+                            <td><?= $user->nif ?></td>
+                            <td><?= $user->morada ?></td>
+                            <td><?= $user->codigopostal ?></td>
+                            <td><?= $user->localidade ?></td>
+                            <?php switch ($user->role) {
+                                case 'admin': ?>
+                                    <td>Administrador</td>
+                                    <?php break;
+
+                                case 'funcionario': ?>
+                                    <td>Funcionário</td>
+                                    <?php break;
+
+                            } ?>
+                            <td>
+                                <a href="index.php?c=user&a=show&id=<?= $user->id ?>" class="btn btn-warning btn-sm"
+                                   role="button"><i class="fas fa-eye" style="color: #ffffff;"></i></a>
+                                <a href="index.php?c=user&a=edit&id=<?= $user->id ?>" class="btn btn-primary btn-sm"
+                                   role="button"><i class="fas fa-pencil-alt"></i></a>
+                                <?php if ($user->id != $userlogado->id) { ?>
+                                    <a href="index.php?c=user&a=delete&id=<?= $user->id ?>"
+                                       class="btn btn-danger btn-sm"
+                                       role="button"><i class="fas fa-trash"></i></a>
+                                <?php } ?>
+                            </td>
+                        </tr>
+                    <?php }
+                } ?>
                 </tbody>
             </table>
         </div>
@@ -83,7 +102,8 @@
     <div class="card-title">
         <h3 class="text-center"><b>Criar um novo user</h3></b></h3>
     </div>
-    &ensp; <a href="index.php?c=user&a=create" class="btn btn-success" role="button"><i class="fas fa-plus" style="color: #ffffff;"></i></a>
+    &ensp; <a href="index.php?c=user&a=create" class="btn btn-success" role="button"><i class="fas fa-plus"
+                                                                                        style="color: #ffffff;"></i></a>
 </div>
 </section>
 <!-- /.content -->

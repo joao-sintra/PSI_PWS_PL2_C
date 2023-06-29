@@ -1,5 +1,8 @@
 <?php
+
 require_once 'controllers/Controller.php';
+
+
 class BackOfficeController extends Controller
 {
     public function __construct()
@@ -9,11 +12,17 @@ class BackOfficeController extends Controller
 
     public function index()
     {
-        $users = User::all();
+        $clientes = User::find('all', array('conditions' => array('role = ?', 'cliente')));
         $servicos = Servico::all();
         $ivas = Iva::all();
+        $FoEmitidas = folhaObra::find('all', array('conditions' => array('estado = ?', 'Emitida')));
 
-        $this->renderView('backoffice', 'index', ['users' => $users, 'servicos' => $servicos, 'ivas' => $ivas]);
+        $contaClientes = Count($clientes);
+        $contaServicos = Count($servicos);
+        $contaIvas = Count($ivas);
+        $contaFoEmitidas = Count($FoEmitidas);
+
+        $this->renderView('backoffice', 'index', ['contaClientes' => $contaClientes, 'contaServicos' => $contaServicos, 'contaIvas' => $contaIvas,'contaFoEmitidas'=> $contaFoEmitidas]);
     }
 }
 

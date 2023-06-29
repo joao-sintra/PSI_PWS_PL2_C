@@ -14,9 +14,12 @@ class FolhaObra extends ActiveRecord\Model
     static $validates_size_of = array(
         array('estado','maximum' => 20, 'too_long' => 'Não deve ultrapassar os 20 carateres!')
     );
-
+    static $validates_inclusion_of = array(
+        array('estado', 'in' => array('Emitida', 'Paga', 'Em lançamento'),
+            'message' => 'O estado deve ser Emitida, Paga ou Em lançamento')
+    );
     static $has_many = array(
-        array('linhasobras')
+        array('linhas_obras','users')
     );
 
 }

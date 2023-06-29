@@ -1,22 +1,24 @@
 <?php
 
-    require_once 'models/User.php';
-    require_once 'controllers/Controller.php';
+require_once 'models/User.php';
+require_once 'controllers/Controller.php';
 
 class UserController extends Controller
 {
     public function __construct()
     {
-        $this->authenticationFilterAllows($roles = ['admin']);
+        $this->authenticationFilterAllows($roles = ['admin', 'funcionario']);
     }
 
     public function index()
     {
         //$users = User::find('all', array('conditions' => array('role = ?', 'funcionario')));
         $users = User::all();
+        $auth = new Auth();
+        $userlogado = User::find($auth->getUserId());
 
         //mostrar a vista index passando os dados por parâmetro
-        $this->renderView('user', 'index', ['users' => $users]);
+        $this->renderView('user', 'index', ['users' => $users, 'userlogado' => $userlogado]);
     }
 
     public function show($id)
@@ -91,5 +93,29 @@ class UserController extends Controller
 
         //redirecionar para o index
         $this->redirectToRoute('user', 'index');
+    }
+
+    public function dadosfuncionario()
+    {
+        $auth = new Auth();
+        $user = User::find($auth->getUserId());
+        $this->renderView('user', 'dadosfuncionario', ['user' => $user]);
+    }
+
+    public function updatefuncionario($id)
+    {
+        $user = User::find($id);
+        $user->update_attributes($this->getHTTPPost());
+
+        if ($user->is_valid()) {
+            $user->save();
+
+            //redirecionar para o index
+            $this->redirectToRoute('backoffice', 'index');
+
+        } else {
+            //mostrar vista edit passando o modelo como parâmetro
+            $this->renderView('user', 'dadosfuncionario');
+        }
     }
 }

@@ -33,13 +33,13 @@
 
                     <div class="small-box bg-info">
                         <div class="inner">
-                            <h3>150</h3>
+                            <h3><?= $contaFoEmitidas ?></h3>
                             <p>FO Emitidas</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-bag"></i>
                         </div>
-                        <a href="#" class="small-box-footer">Mais info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="index.php?c=folhaobra&a=show" class="small-box-footer">Mais info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
 
@@ -47,13 +47,13 @@
 
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>55 <!--<sup style="font-size: 20px">%</sup>--></h3>
+                            <h3><?= $contaClientes ?><!--<sup style="font-size: 20px">%</sup>--></h3>
                             <p>Clientes Registados</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-stats-bars"></i>
                         </div>
-                        <a href="#" class="small-box-footer">Mais info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="index.php?c=cliente&a=index" class="small-box-footer">Mais info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
 
@@ -61,13 +61,13 @@
 
                     <div class="small-box bg-warning">
                         <div class="inner">
-                            <h3>12</h3>
+                            <h3><?= $contaServicos; ?></h3>
                             <p>Serviços Criados</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
                         </div>
-                        <a href="#" class="small-box-footer">Mais info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="index.php?c=servico&a=index" class="small-box-footer">Mais info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
 
@@ -75,15 +75,16 @@
 
                     <div class="small-box bg-danger">
                         <div class="inner">
-                            <h3>65</h3>
+                            <h3><?= $contaIvas; ?></h3>
                             <p>IVAs Registados</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-pie-graph"></i>
                         </div>
-                        <a href="#" class="small-box-footer">Mais info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="index.php?c=iva&a=index" class="small-box-footer">Mais info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>

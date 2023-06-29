@@ -33,7 +33,7 @@
             </div>
 
 
-            <form action='index.php?c=user&a=update&id=<?=$user->id?>' method="POST">
+            <form action='index.php?c=user&a=updatefuncionario&id=<?=$user->id?>' method="POST">
                 <div class="card-body">
                     <div class="form-group">
                         <label for="username">Nome </label>
@@ -166,17 +166,10 @@
                     <div class="form-group">
                         <label for="role">Role</label><br>
                         <?php switch ($user->role) {
-                            case 'admin': ?>
-                                <select name="role" id="role">
-                                    <option value="admin">Administrador</option>
-                                    <option value="funcionario">Funcionário</option>
-                                </select>
-                            <?php break;
-
                             case 'funcionario': ?>
                                 <select name="role" id="role">
                                     <option value="funcionario">Funcionário</option>
-                                    <option value="admin">Administrador</option>
+
                                 </select>
                                 <?php break;
                         } ?>

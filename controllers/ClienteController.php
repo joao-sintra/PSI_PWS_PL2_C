@@ -3,7 +3,6 @@
     require_once 'models/User.php';
     require_once 'controllers/Controller.php';
 
-
 class ClienteController extends Controller
 {
 

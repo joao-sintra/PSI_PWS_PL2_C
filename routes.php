@@ -23,7 +23,10 @@ return [
     ],
 
     'frontoffice' => [
-        'index' => ['GET', 'FrontOfficeController', 'index']
+        'index' => ['GET', 'FrontOfficeController', 'index'],
+         'show' => ['GET', 'FrontOfficeController', 'show'],
+         'pagarfolha' => ['GET', 'FrontOfficeController', 'pagarfolha']
+
 
     ],
 
@@ -61,6 +64,8 @@ return [
         'edit' => ['GET', 'UserController', 'edit'],
         'update' => ['POST', 'UserController', 'update'],
         'delete' => ['GET', 'UserController', 'delete'],
+        'dadosfuncionario' => ['GET', 'UserController', 'dadosfuncionario'],
+        'updatefuncionario' => ['POST', 'UserController', 'updatefuncionario'],
     ],
 
     'iva' => [
@@ -78,6 +83,7 @@ return [
         'show' => ['GET', 'LinhaObraController', 'show'],
         'create' => ['GET', 'LinhaObraController', 'create'],
         'store' => ['POST', 'LinhaObraController', 'store'],
+        'selectservico' => ['GET', 'LinhaObraController', 'selectservico'],
         'edit' => ['GET', 'LinhaObraController', 'edit'],
         'update' => ['POST', 'LinhaObraController', 'update'],
         'delete' => ['GET', 'LinhaObraController', 'delete'],
@@ -85,11 +91,12 @@ return [
 
     'folhaobra' => [
         'create' => ['GET', 'FolhaObraController', 'create'],
+        'show' => ['GET', 'FolhaObraController', 'show'],
         'selectcliente' => ['GET', 'FolhaObraController', 'selectcliente'],
         'store' => ['POST', 'FolhaObraController', 'store'],
-        'selectservico' => ['GET', 'FolhaObraController', 'selectservico'],
         'update' => ['POST', 'FolhaObraController', 'update'],
         'delete' => ['GET', 'FolhaObraController', 'delete'],
+        'emitirfolha' => ['GET', 'FolhaObraController', 'emitirfolha'],
     ],
 
     'cliente' => [

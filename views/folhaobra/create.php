@@ -6,6 +6,7 @@
     <title><?= constant('APP_NAME') ?> | Emitir FO</title>
 
 </head>
+<body>
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
@@ -66,7 +67,7 @@
                         <!-- /.col -->
                         <div class="col-sm-4 invoice-col">
                             <?php if (!isset($cliente->id)) { ?>
-                                <a href="index.php?c=folhaobra&a=selectcliente" class="btn btn-info"
+                                <a href="index.php?c=folhaobra&a=selectcliente&pesquisa=" class="btn btn-info"
                                    role="button">Selecionar </i></a>
                                 <br>
                                 <br>
@@ -83,9 +84,7 @@
                         <!-- /.col -->
                         <div class="col-sm-4 invoice-col">
 
-                            <b>Folha de obra #<?= $folhaObra->id+1?></b><br>
-
-                            <b>Pagamento até:</b> 10/06/2023<br>
+                            <b>Folha de obra #<?php if(isset($folhaObra->id)) echo$folhaObra->id; ?></b><br>
 
                         </div>
                         <!-- /.col -->
@@ -93,85 +92,14 @@
                     <!-- /.row -->
 
                     <!-- Table row -->
-                    <div class="row">
-                        <div class="col-12 table-responsive">
-                            <table class="table table-striped">
-                                <thead>
-                                <tr>
-                                    <th>Ref.</th>
-                                    <th>Desc.</th>
-                                    <th>Qtn.</th>
-                                    <th>Pr. Uni.</th>
-                                    <th>IVA Valor</th>
-                                    <th>Subtotal</th>
-                                </tr>
-                                </thead>
-                                <!--
-
-                                -->
-                            </table>
-
-                            <?php if ($folhaObra->id != 0) { ?>
-                                <h3><b>Criar uma nova Linha
-                                        de Obra&nbsp;</b><a href="index.php?c=linhaobra&a=create"
-                                                            class="btn btn-success" role="button"><i
-                                                class="fas fa-plus" style="color: #ffffff;"></i></a></h3>
-                                <br>
-                            <?php } ?>
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
-
-                    <div class="row">
-                        <!-- accepted payments column -->
-                        <div class="col-6">
-                            <p class="lead">Métodos de Pagamento:</p>
-                            <img src="public/img/credit/visa.png" alt="Visa">
-                            <img src="public/img/credit/mastercard.png" alt="Mastercard">
-                            <img src="public/img/credit/paypal2.png" alt="Paypal">
 
 
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-6">
 
-
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <tr>
-                                        <th style="width:50%">Subtotal:</th>
-                                        <td>0 €</td>
-                                    </tr>
-                                    <tr>
-                                        <th>IVA (23%)</th>
-                                        <td>0 €</td>
-                                    </tr>
-
-                                    <tr>
-                                        <th>Total:</th>
-                                        <td>0 €</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
-
-                    <!-- this row will not appear when printing -->
-                    <div class="row no-print">
-                        <div class="col-12">
-                            <a href="index.php?c=backoffice&a=index" class="btn btn-danger float-right" role="button">Cancelar</a>
-                            <button type="button" disabled class="btn btn-secondary float-right"
-                                    style="margin-right: 5px;">Emitir
-                            </button>
-                            <H5><b>Funcionário:</b> <?= $auth->getUserName() ?></H5>
-                        </div>
-                    </div>
                 </div>
                 <!-- /.invoice -->
             </div><!-- /.col -->
         </div><!-- /.row -->
     </div><!-- /.container-fluid -->
 </section>
+</body>
+</html>
