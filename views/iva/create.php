@@ -53,7 +53,7 @@
                     </div>
                     <div class="form-group">
                         <label for="vigor">Vigor </label>
-                        <input type="checkbox" class="form-control"  value="<?php if(isset($iva)) { echo
+                        <input type="checkbox" class="form-control" id="Cbvigor" value="<?php if(isset($iva)) { echo
                         $iva->vigor; }?>">
                         <input type="hidden" class="form-control" id="vigor" name="vigor"  value="0">
 
@@ -62,9 +62,10 @@
                                 var cb = document.getElementById("Cbvigor");
                                 var vigor = document.getElementById("vigor");
 
-                                if (cb.checked)
+                                if (cb.checked) {
                                     vigor.value = "1";
-                                console.log(vigor.value);
+                                    console.log(vigor.value);
+                                }
                             }
                         </script>
                     </div>

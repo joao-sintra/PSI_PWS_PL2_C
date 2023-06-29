@@ -63,6 +63,8 @@
                                 <td>
                                     <a href="index.php?c=frontoffice&a=show&id_folhaobra=<?= $folhaObra->id ?>"
                                        class="btn btn-warning btn-sm" role="button">PAGAR</a>
+                                    <a href="index.php?c=frontoffice&a=showfo&id_folhaobra=<?= $folhaObra->id ?>"
+                                       class="btn btn-info btn-sm" role="button">VER</a>
                                 </td>
                             </tr>
                         <?php }

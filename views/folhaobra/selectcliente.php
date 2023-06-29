@@ -32,24 +32,19 @@
                 <h3 class="card-title">Selecione um cliente para a Folha de Obra</h3>
                 <div class="card-tools">
                     <div class="input-group input-group-sm" style="width: 200px;">
-                        <form action="index.php?c=folhaobra&c=selectcliente" method="get" id="form">
+                        <form action="index.php" method="GET" id="form">
+                            <input type="hidden" name="c" id="c" class="form-control float-left"
+                                   value="folhaobra" >
+                            <input type="hidden" name="a" id="a" class="form-control float-left"
+                                   value="selectcliente">
                             <input type="text" name="pesquisa" id="pesquisa" class="form-control float-left"
                                    placeholder="Pesquisar clientes...">
-
-                                <button type="submit" class="btn btn-default">
-                                    <i class="fas fa-search"></i>
-                                </button>
-
+                            <button type="submit" class="btn btn-default">
+                                <i class="fas fa-search"></i>
+                            </button>
                         </form>
                     </div>
                 </div>
-                <script>
-
-                    document.querySelector('form').addEventListener("submit", function (e) {
-                        e.preventDefault()
-                        window.location.href = 'index.php?c=folhaobra&a=selectcliente&pesquisa=' + document.getElementById('pesquisa').value;
-                    })
-                </script>
             </div>
 
 

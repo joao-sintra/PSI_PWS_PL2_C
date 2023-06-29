@@ -189,16 +189,6 @@
 
                                         }
                                     </script>
-                                    <?php
-                                    if ($folhaObra->estado == 'Emitida') {
-                                        ?>
-                                        <button type="button" class="btn btn-success float-right"
-                                                style="margin-right: 5px;" onclick="myFunction()">Pagar
-                                        </button>
-
-
-                                        <?php
-                                    } ?>
 
                                     <H5><b>Funcionário:</b> <?= $folhaObra->user->username ?></H5>
                                 </div>

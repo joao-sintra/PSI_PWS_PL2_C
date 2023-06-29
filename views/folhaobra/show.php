@@ -52,8 +52,6 @@
                             <th>Funcionário</th>
                             <th>Valor Total</th>
                             <th>Estado</th>
-
-
                         </tr>
                         </thead>
                         <tbody>
@@ -63,16 +61,8 @@
                                 <tr>
                                     <td><?= $folhaObra->id ?></td>
                                     <td><?= date('d/m/Y', strtotime($folhaObra->data)) ?></td>
-                                    <?php foreach ($users as $cliente) { ?>
-                                        <?php if ($cliente->id == $folhaObra->cliente_id) { ?>
-                                            <td><?= $cliente->username ?></td>
-                                        <?php }
-                                    } ?>
-                                    <?php foreach ($users as $funcionario) { ?>
-                                        <?php if ($funcionario->id == $folhaObra->user_id) { ?>
-                                            <td><?= $funcionario->username ?></td>
-                                        <?php }
-                                    } ?>
+                                    <td><?= $folhaObra->user->username ?></td>
+                                    <td><?= $folhaObra->cliente->username ?></td>
                                     <td><?= $folhaObra->valortotal ?></td>
                                     <td><?= $folhaObra->estado ?></td>
                                 </tr>

@@ -19,7 +19,11 @@ class FolhaObra extends ActiveRecord\Model
             'message' => 'O estado deve ser Emitida, Paga ou Em lançamento')
     );
     static $has_many = array(
-        array('linhas_obras','users')
+        array('linhas_obras', 'class_name' => 'FolhaObra', 'foreign_key' => 'folhaobra_id')
     );
 
+    static $belongs_to = array(
+        array('user', 'class_name' => 'User', 'foreign_key' => 'user_id'),
+        array('cliente', 'class_name' => 'User','foreign_key' => 'cliente_id')
+    );
 }

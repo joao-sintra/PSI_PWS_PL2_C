@@ -32,7 +32,6 @@ class User extends ActiveRecord\Model
         array('telefone', 'with' => '/^\d{9}$/', 'message' => 'O número de telefone deve ter exatamente 9 números.'),
         array('nif', 'with' => '/^\d{9}$/', 'message' => 'O NIF deve ter exatamente 9 números.'),
         array('codigopostal', 'with' => '/^\d{4}-\d{3}$/', 'message' => 'O código postal deve ter apenas números e o seguinte formato: "1234-567" '),
-
     );
 
     static $belongs_to = array(

@@ -21,15 +21,23 @@ class FrontOfficeController extends Controller
     public function show($id_folhaobra){
 
         $folhaObra = FolhaObra::find($id_folhaobra);
-        $cliente = User::find($folhaObra->cliente_id);
         $empresa = Empresa::first();
 
         $linhasObra = LinhasObra::find_all_by_folhaobra_id($id_folhaobra);
 
         $subtotal = $this->calculaSubtotal($folhaObra, $linhasObra);
-        $this->renderView('frontoffice', 'show', ['folhaObra' => $folhaObra, 'cliente' => $cliente, 'empresa' => $empresa, 'linhasObra' => $linhasObra, 'subtotal' => $subtotal], 'frontoffice');
+        $this->renderView('frontoffice', 'show', ['folhaObra' => $folhaObra, 'empresa' => $empresa, 'linhasObra' => $linhasObra, 'subtotal' => $subtotal], 'frontoffice');
+    }
 
+    public function showfo($id_folhaobra){
 
+        $folhaObra = FolhaObra::find($id_folhaobra);
+        $empresa = Empresa::first();
+
+        $linhasObra = LinhasObra::find_all_by_folhaobra_id($id_folhaobra);
+
+        $subtotal = $this->calculaSubtotal($folhaObra, $linhasObra);
+        $this->renderView('frontoffice', 'showfo', ['folhaObra' => $folhaObra, 'empresa' => $empresa, 'linhasObra' => $linhasObra, 'subtotal' => $subtotal], 'frontoffice');
     }
 
     public function pagarfolha($id_folhaobra)

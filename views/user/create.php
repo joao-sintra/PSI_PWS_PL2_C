@@ -125,7 +125,6 @@
                         <select name="role" id="role">
                             <option value="admin">Administrador</option>
                             <option value="funcionario">Funcionário</option>
-                            <option value="cliente">Cliente</option>
                         </select>
                     </div>
                 </div>

@@ -26,7 +26,7 @@ class Servico extends ActiveRecord\Model
     );
 
     static $belongs_to = array(
-        array('iva')
+        array('iva', 'class_name' => 'Iva', 'foreign_key' => 'iva_id'),
     );
 
 

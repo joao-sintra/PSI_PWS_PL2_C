@@ -24,9 +24,9 @@ return [
 
     'frontoffice' => [
         'index' => ['GET', 'FrontOfficeController', 'index'],
-         'show' => ['GET', 'FrontOfficeController', 'show'],
-         'pagarfolha' => ['GET', 'FrontOfficeController', 'pagarfolha']
-
+        'show' => ['GET', 'FrontOfficeController', 'show'],
+        'pagarfolha' => ['GET', 'FrontOfficeController', 'pagarfolha'],
+        'showfo' => ['GET', 'FrontOfficeController', 'showfo']
 
     ],
 
